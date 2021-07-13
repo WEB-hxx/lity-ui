@@ -47,7 +47,7 @@ export default {
       type: Boolean,
       default: false
     },
-    light: {
+    default: {
       type: Boolean,
       default: false
     },
@@ -68,7 +68,7 @@ export default {
         'lity-btn-danger': props.danger,
         'lity-btn-outline': props.outline,
         'lity-btn-outline-primary': props.outline && props.primary,
-        'lity-btn-light': props.light
+        'lity-btn-default': props.default
       }
     })
     function handleClick (event) {
@@ -156,7 +156,7 @@ export default {
     background: $btn-danger-bgc;
     @include btn-active($btn-danger-active-bgc);
   }
-  .lity-btn-light{
+  .lity-btn-default{
     color: $btn-light-color;
     background: $btn-light-bgc;
     box-shadow: $box-shadow-content;

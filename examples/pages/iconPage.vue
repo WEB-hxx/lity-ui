@@ -3,7 +3,11 @@
 </template>
 
 <script>
+import LityIcon from '../components/icon.vue'
 export default {
+  components: {
+    LityIcon
+  }
 }
 </script>
 
