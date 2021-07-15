@@ -20,6 +20,9 @@ export default {
 </script>
 
 <style lang="scss">
+.page-content{
+  padding-bottom:100px;
+}
 .code-pre{
     position: relative;
     display: block;
@@ -65,5 +68,33 @@ export default {
     padding: 2px 4px;
     box-sizing: border-box;
     font-size: .93em;
+}
+.table {
+    width: 100%;
+    box-sizing: border-box;
+    table-layout: fixed;
+    border-collapse: separate;
+    border: 1px solid #e7e7e7;
+    border-width: 1px 0 0 1px;
+    line-height: 1.7;
+    border-radius: 4px;
+    color: #666;
+    font-size:15px;
+    th,td{
+       padding: 6px 13px;
+       border: 1px solid #e7e7e7;
+       border-width: 0 1px 1px 0;
+       vertical-align: middle;
+       text-align: left;
+       word-wrap: break-word;
+       word-break: break-word;
+    }
+    tr th:first-child {
+       border-top-left-radius: 4px;
+    }
+    tr th {
+       font-weight: 600;
+       background-color: #f9f8f8;
+    }
 }
 </style>

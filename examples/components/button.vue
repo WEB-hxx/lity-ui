@@ -3,6 +3,7 @@
     class="lity-btn"
     :type="type"
     :class="btnClass"
+    style="color"
     @click="handleClick">
     <i :class="icon" v-if="icon"></i>
     <slot></slot>
@@ -47,6 +48,10 @@ export default {
       type: Boolean,
       default: false
     },
+    square: {
+      type: Boolean,
+      default: false
+    },
     default: {
       type: Boolean,
       default: false
@@ -67,7 +72,7 @@ export default {
         'lity-btn-warning': props.warning,
         'lity-btn-danger': props.danger,
         'lity-btn-outline': props.outline,
-        'lity-btn-outline-primary': props.outline && props.primary,
+        'lity-btn-square': props.square,
         'lity-btn-default': props.default
       }
     })
@@ -125,6 +130,9 @@ export default {
       transform-origin: right center;
     }
   }
+  .lity-btn-square{
+     border-radius: 25px;
+  }
   .lity-btn-inline{
      width: auto;
     display: inline-block;
@@ -168,13 +176,6 @@ export default {
     background: $btn-outline-bgc;
     @include border-1px($btn-outline-bdc);
     @include btn-active($btn-outline-active-bgc, $btn-outline-active-bdc);
-  }
-
-  .lity-btn-outline-primary{
-    color: $btn-outline-primary-color;
-    background: $btn-outline-primary-bgc;
-    @include border-1px($btn-outline-primary-bdc);
-    @include btn-active($btn-outline-primary-active-bgc, $btn-outline-primary-active-bdc);
   }
 
   .lity-btn_disabled{

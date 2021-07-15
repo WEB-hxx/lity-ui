@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="page-content">
     <h1 class="h1">Button 按钮</h1>
     <h2 class="h2">组件引入</h2>
 <div class="code-pre" v-highlight>
@@ -66,6 +66,17 @@ app.use(Button);</code>
 </div>
 <lity-button icon="lityic-arrow-down">icon 按钮</lity-button>
 
+<h2 class="h2">圆角按钮</h2>
+<div class="doc-text">可以设置 <code class="code-tag">:square</code> 的值为 <code class="code-tag">true</code> 来展示圆角按钮</div>
+<div class="code-pre" v-highlight>
+<pre>
+<code>&lt;lity-button&gt;方形按钮&lt;/lity-button&gt;
+&lt;lity-button :square="true"&gt;圆角按钮&lt;/lity-button&gt;</code>
+</pre>
+</div>
+<lity-button :inline="true">方形按钮</lity-button>
+<lity-button :square="true" :inline="true">圆角按钮</lity-button>
+
 <h2 class="h2">禁用按钮</h2>
 <div class="doc-text">可以设置 <code class="code-tag">:disabled</code> 的值为 <code class="code-tag">true</code> 来禁用按钮使用</div>
 <div class="code-pre" v-highlight>
@@ -74,6 +85,34 @@ app.use(Button);</code>
 </pre>
 </div>
 <lity-button :disabled="true">禁用按钮</lity-button>
+<h2 class="h2">Props 配置</h2>
+<table class="table">
+<thead><tr><th>参数</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead>
+<tbody>
+  <tr>
+    <td>type</td> <td>按钮类型</td> <td>String</td> <td>button/submit</td> <td>button</td>
+  </tr>
+ <tr><td>primary</td> <td>主要的</td> <td>Boolean</td> <td>true/false</td> <td>false</td></tr>
+  <tr><td>success</td> <td>成功按钮</td> <td>Boolean</td> <td>true/false</td> <td>false</td></tr>
+  <tr><td>warning</td> <td>警告按钮</td> <td>Boolean</td> <td>true/false</td> <td>false</td></tr>
+  <tr><td>danger</td> <td>危险按钮</td> <td>Boolean</td> <td>true/false</td> <td>false</td></tr>
+  <tr><td>disabled</td> <td>禁用状态</td> <td>Boolean</td> <td>true/false</td> <td>false</td></tr>
+  <tr><td>icon</td> <td>图标Icon</td> <td>String</td> <td>icon 的 name 值</td> <td>-</td></tr>
+  <tr><td>inline</td> <td>是否内联</td> <td>Boolean</td> <td>true/false</td> <td>false</td></tr>
+  <tr><td>outline</td> <td>外边框</td> <td>Boolean</td> <td>true/false</td> <td>false</td></tr>
+</tbody>
+</table>
+
+<h2 class="h2">事件</h2>
+<table class="table">
+<thead><tr><th>事件</th> <th>说明</th> <th>参数</th></tr></thead>
+<tbody>
+  <tr>
+    <td>click</td> <td>点击按钮后触发此事件，如果禁用状态，则不触发</td> <td>e - 事件对象</td>
+  </tr>
+</tbody>
+</table>
+
 </div>
 </template>
 
