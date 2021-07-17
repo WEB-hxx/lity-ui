@@ -7,6 +7,12 @@
         <div class="lity-nav__item">
             <router-link class="tab-link" to="/icon">图标</router-link>
        </div>
+       <div class="lity-nav__item">
+            <router-link class="tab-link" to="/loading">loading</router-link>
+       </div>
+        <div class="lity-nav__item">
+            <router-link class="tab-link" to="/gird">gird 宫格</router-link>
+       </div>
    </div>
 </template>
 

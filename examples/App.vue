@@ -29,7 +29,7 @@ export default {
     padding: 16px;
     margin-bottom: 30px;
     overflow-x: auto;
-    color: #58727e;
+    color: #f9f8f8;
     font-weight: 400;
     font-size: 14px;
     font-family: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace;

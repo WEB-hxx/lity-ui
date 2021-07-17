@@ -1,8 +1,9 @@
 <template>
 <div class="page-content">
     <h1 class="h1">Icon 字体图标</h1>
+  <div class="doc-text">基于字体的图标集，可以通过 Icon 组件使用，也可以在其他组件中通过 icon 属性引用。</div>
     <h2 class="h2">组件引入</h2>
-<div class="doc-text">基于字体的图标集，可以通过 Icon 组件使用，也可以在其他组件中通过 icon 属性引用。</div>
+  <div class="doc-text">组件按需引入，也可以全局引入</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>import { createApp } from 'vue';
@@ -12,6 +13,7 @@ app.use(Icon);</code>
 </pre>
 </div>
 <h2 class="h2">基础用法</h2>
+<div class="doc-text">可以设置 <code class="code-tag">name</code> 的值为字体图标的名字来展示不同的图标</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>&lt;lity-icon name="lityic-collect"&gt;&lt;/lity-icon&gt;</code>
@@ -20,6 +22,7 @@ app.use(Icon);</code>
 <lity-icon name="lityic-collect"></lity-icon>
 
 <h2 class="h2">图标颜色</h2>
+<div class="doc-text">可以设置 <code class="code-tag">color</code> 的颜色值为来展示不同颜色的图标</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>&lt;lity-icon name="lityic-collect" color="red"&gt;&lt;/lity-icon&gt;</code>
@@ -28,6 +31,7 @@ app.use(Icon);</code>
 <lity-icon name="lityic-collect" color="red"></lity-icon>
 
 <h2 class="h2">图标大小</h2>
+<div class="doc-text">可以设置 <code class="code-tag">size</code> 的颜色值为来展示不同颜色的图标</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>&lt;lity-icon name="lityic-collect" size="50" color="red"&gt;&lt;/lity-icon&gt;</code>
@@ -132,8 +136,22 @@ app.use(Icon);</code>
   <li><lity-icon size="30" name="lityic-password-fill"></lity-icon><div>lityic-password-fill</div></li>
   <li><lity-icon size="30" name="lityic-rotate-left"></lity-icon><div>lityic-rotate-left</div></li>
   <li><lity-icon size="30" name="lityic-time"></lity-icon><div>lityic-time</div></li>
-
 </ul>
+<h2 class="h2">Props 配置</h2>
+<table class="table">
+<thead><tr><th>参数</th> <th>说明</th><th>类型</th><th>默认值</th></tr></thead>
+<tbody>
+  <tr>
+    <td>name</td> <td>icon 图标的名称</td><th>String</th> <td>-</td>
+  </tr>
+  <tr>
+    <td>size</td> <td>icon 图标的大小</td><th>Number</th> <td>20(单位px)</td>
+  </tr>
+   <tr>
+    <td>color</td> <td>icon 图标的颜色</td><th>String</th> <td>inherit</td>
+  </tr>
+</tbody>
+</table>
 </div>
 </template>
 

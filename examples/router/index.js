@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Button from '../pages/btnPage.vue'
 import Icon from '../pages/iconPage.vue'
+import Loading from '../pages/loadingPage.vue'
+import Gird from '../pages/girdPage.vue'
 
 const routes = [
   {
@@ -10,6 +12,14 @@ const routes = [
   {
     path: '/icon',
     component: Icon
+  },
+  {
+    path: '/loading',
+    component: Loading
+  },
+  {
+    path: '/gird',
+    component: Gird
   }
 ]
 

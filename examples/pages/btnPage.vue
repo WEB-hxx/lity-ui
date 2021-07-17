@@ -2,6 +2,7 @@
 <div class="page-content">
     <h1 class="h1">Button 按钮</h1>
     <h2 class="h2">组件引入</h2>
+<div class="doc-text">组件按需引入，也可以全局引入</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>import { createApp } from 'vue';
@@ -58,7 +59,7 @@ app.use(Button);</code>
 <lity-button :outline="true">Outline 按钮</lity-button>
 
 <h2 class="h2">图标按钮</h2>
-<div class="doc-text">可以设置 <code class="code-tag">icon</code> 的值为字体图片的名字来展示不同的图标的按钮</div>
+<div class="doc-text">可以设置 <code class="code-tag">icon</code> 的值为字体图标的名字来展示不同的图标的按钮</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>&lt;lity-button icon="lityic-arrow-down"&gt;icon 按钮&lt;/lity-button&gt;</code>
