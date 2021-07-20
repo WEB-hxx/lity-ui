@@ -30,18 +30,26 @@ export default {
       },
       default: 'link'
     },
-    link: [String, Object]
+    link: [String, Object],
+    style: {
+      type: String
+    }
   },
   setup (props, context) {
+    // 强制转换为Boolean 用 !!
     const checkIcon = computed(() => {
       return !!context.slots.icon
     })
     const checkText = computed(() => {
       return !!context.slots.text
     })
+    const styles = computed(() => {
+      return context.style
+    })
     return {
       checkIcon,
-      checkText
+      checkText,
+      styles
     }
   }
 }

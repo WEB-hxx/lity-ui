@@ -142,13 +142,13 @@ app.use(Icon);</code>
 <thead><tr><th>参数</th> <th>说明</th><th>类型</th><th>默认值</th></tr></thead>
 <tbody>
   <tr>
-    <td>name</td> <td>icon 图标的名称</td><th>String</th> <td>-</td>
+    <td>name</td> <td>icon 图标的名称</td><td>String</td> <td>-</td>
   </tr>
   <tr>
-    <td>size</td> <td>icon 图标的大小</td><th>Number</th> <td>20(单位px)</td>
+    <td>size</td> <td>icon 图标的大小</td><td>Number</td> <td>20(单位px)</td>
   </tr>
    <tr>
-    <td>color</td> <td>icon 图标的颜色</td><th>String</th> <td>inherit</td>
+    <td>color</td> <td>icon 图标的颜色</td><td>String</td> <td>inherit</td>
   </tr>
 </tbody>
 </table>

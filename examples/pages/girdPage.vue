@@ -136,17 +136,29 @@ Vue3 是通过 <code class="code-tag">template v-slot:icon</code> 自定义图�
     <td>type</td> <td>传 type="link" 将会解析为路由，type="a" 则解析为普通 &lt;a&gt;</td><td>String</td><td>link, a</td> <td>默认link</td>
   </tr>
   <tr><td>link</td> <td>需要跳转的URL</td><td>String || Object</td><td>-</td> <td>-</td></tr>
+  <tr><td>style</td> <td>lity-grid-item 元素自定义样式</td><td>String</td> <td>-</td></tr>
 </tbody>
 </table>
 </div>
 </template>
 <script>
+
 import LityGrid from '../components/grid'
 import LityGridItem from '../components/grid-item'
+import Toast from '../components/toast/index'
+
 export default {
   components: {
     LityGrid,
     LityGridItem
+  },
+  setup (props, content) {
+    function fff () {
+      Toast({ msg: 'dddd', time: 10000 })
+    }
+    return {
+      fff
+    }
   }
 }
 </script>

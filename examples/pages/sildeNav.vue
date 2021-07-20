@@ -5,13 +5,19 @@
            <router-link class="tab-link" to="/button">按钮</router-link>
        </div>
         <div class="lity-nav__item">
-            <router-link class="tab-link" to="/icon">图标</router-link>
+            <router-link class="tab-link" to="/icon">字体图标</router-link>
        </div>
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/loading">loading</router-link>
        </div>
         <div class="lity-nav__item">
             <router-link class="tab-link" to="/gird">gird 宫格</router-link>
+       </div>
+        <div class="lity-nav__item">
+            <router-link class="tab-link" to="/toast">toast 轻提示</router-link>
+       </div>
+       <div class="lity-nav__item">
+            <router-link class="tab-link" to="/tab">Tab 选项卡</router-link>
        </div>
    </div>
 </template>

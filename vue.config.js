@@ -17,15 +17,5 @@ module.exports = {
       .tap(options => {
         return options
       })
-  },
-
-  configureWebpack: {
-    resolve: {
-      alias: {
-        assets: '@/assets',
-        components: '@/components',
-        pages: '@/pages'
-      }
-    }
   }
 }

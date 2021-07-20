@@ -3,6 +3,8 @@ import Button from '../pages/btnPage.vue'
 import Icon from '../pages/iconPage.vue'
 import Loading from '../pages/loadingPage.vue'
 import Gird from '../pages/girdPage.vue'
+import Toast from '../pages/toastPage.vue'
+import Tab from '../pages/tabPage.vue'
 
 const routes = [
   {
@@ -20,6 +22,14 @@ const routes = [
   {
     path: '/gird',
     component: Gird
+  },
+  {
+    path: '/toast',
+    component: Toast
+  },
+  {
+    path: '/tab',
+    component: Tab
   }
 ]
 
