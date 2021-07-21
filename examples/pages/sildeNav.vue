@@ -1,23 +1,29 @@
 <template>
    <div class="lity-nav">
-       <div class="lity-nav__title">基础组件</div>
+       <div class="lity-nav__title">基础</div>
        <div class="lity-nav__item">
-           <router-link class="tab-link" to="/button">按钮</router-link>
+           <router-link class="tab-link" to="/button">按钮 Button</router-link>
        </div>
         <div class="lity-nav__item">
-            <router-link class="tab-link" to="/icon">字体图标</router-link>
+            <router-link class="tab-link" to="/icon">图标 Icon</router-link>
        </div>
        <div class="lity-nav__item">
-            <router-link class="tab-link" to="/loading">loading</router-link>
+            <router-link class="tab-link" to="/loading">加载 Loading</router-link>
        </div>
         <div class="lity-nav__item">
-            <router-link class="tab-link" to="/gird">gird 宫格</router-link>
+            <router-link class="tab-link" to="/gird">宫格 Gird</router-link>
        </div>
-        <div class="lity-nav__item">
-            <router-link class="tab-link" to="/toast">toast 轻提示</router-link>
+       <div class="lity-nav__item">
+            <router-link class="tab-link" to="/tag">标签 Tag</router-link>
        </div>
+       <div class="lity-nav__title">表单</div>
+       <div class="lity-nav__title">滚动</div>
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/tab">Tab 选项卡</router-link>
+       </div>
+       <div class="lity-nav__title">弹出层</div>
+       <div class="lity-nav__item">
+            <router-link class="tab-link" to="/toast">轻提示 Toast</router-link>
        </div>
    </div>
 </template>

@@ -4,6 +4,7 @@ import Icon from '../pages/iconPage.vue'
 import Loading from '../pages/loadingPage.vue'
 import Gird from '../pages/girdPage.vue'
 import Toast from '../pages/toastPage.vue'
+import Tag from '../pages/tagPage.vue'
 import Tab from '../pages/tabPage.vue'
 
 const routes = [
@@ -26,6 +27,10 @@ const routes = [
   {
     path: '/toast',
     component: Toast
+  },
+  {
+    path: '/tag',
+    component: Tag
   },
   {
     path: '/tab',

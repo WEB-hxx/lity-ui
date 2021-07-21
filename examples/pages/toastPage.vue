@@ -51,7 +51,7 @@ app.use(Toast);</code>
     <td>msg</td> <td>提示语信息</td><td>String</td> <td>-</td>
   </tr>
   <tr>
-    <td>img_url</td> <td>自定义图标路径</td><td>String</td> <td>-</td>
+    <td>imgurl</td> <td>自定义图标路径</td><td>String</td> <td>-</td>
   </tr>
    <tr>
     <td>time</td> <td>显示的时间</td><td>Number</td> <td>3000</td>
