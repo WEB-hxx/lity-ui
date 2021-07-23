@@ -51,12 +51,12 @@ app.use(Tag);</code>
 <div class="code-pre" v-highlight>
 <pre>
 <code>&lt;lity-tag shape="square" color="#fff" bgcolor="#f0f" &gt;自定义的666&lt;/lity-tag&gt;
-&lt;lity-tag shape="square" color="#fff" bgcolor="#f0f" scale="1.5" &gt;缩放1.5倍&lt;/lity-tag&gt;
+&lt;lity-tag shape="square" color="#fff" bgcolor="#f0f" :scale="1.5" &gt;缩放1.5倍&lt;/lity-tag&gt;
 </code>
 </pre>
 </div>
 <lity-tag shape="square" color="#fff" bgcolor="#f0f">自定义的666</lity-tag>&nbsp;&nbsp;&nbsp;&nbsp;
-<lity-tag shape="square" color="#fff" bgcolor="#f0f" scale="1.5">缩放1.5倍</lity-tag>
+<lity-tag shape="square" color="#fff" bgcolor="#f0f" :scale="1.5">缩放1.5倍</lity-tag>
 
 <h2 class="h2">Props 配置</h2>
 <table class="table">

@@ -24,18 +24,18 @@ app.use(Loading);</code>
 <div class="doc-text">可以设置 <code class="code-tag">size</code> 数字类型的值来展示 loading 大小</div>
 <div class="code-pre" v-highlight>
 <pre>
-<code>&lt;lity-loading size="40" /&gt;</code>
+<code>&lt;lity-loading :size="40" /&gt;</code>
 </pre>
 </div>
-<LityLoading size="40"></LityLoading>
+<LityLoading :size="40"></LityLoading>
 <h2 class="h2">loading 颜色</h2>
 <div class="doc-text">可以设置 <code class="code-tag">color</code> 背景颜色的值来展示 loading 颜色</div>
 <div class="code-pre" v-highlight>
 <pre>
-<code>&lt;lity-loading color="#f0f" /&gt;</code>
+<code>&lt;lity-loading :size="40" color="#f0f" /&gt;</code>
 </pre>
 </div>
-<LityLoading size="40" color="#f0f"></LityLoading>
+<LityLoading :size="40" color="#f0f"></LityLoading>
 <h2 class="h2">Props 配置</h2>
 <table class="table">
 <thead><tr><th>参数</th> <th>说明</th><th>类型</th><th>默认值</th></tr></thead>

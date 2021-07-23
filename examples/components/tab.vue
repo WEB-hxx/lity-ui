@@ -9,8 +9,10 @@
        </template>
     <div v-if="showSlider" ref="sliderRef" class="lity-tab-slider"></div>
    </div>
-   <div class="lity-tab-panel" ref="sliderPanelRef">
-      <slot></slot>
+   <div class="lity-tab-panels">
+     <div class="lity-tab-panels-group" ref="panelGroupRef">
+        <slot></slot>
+     </div>
    </div>
 </template>
 
@@ -19,6 +21,7 @@ import { ref, onMounted, nextTick } from 'vue'
 const COMPONENT_NAME = 'lity-tab'
 export default {
   name: COMPONENT_NAME,
+  emits: ['click'],
   props: {
     data: {
       type: Array,
@@ -38,6 +41,7 @@ export default {
     const isActive = ref(props.value)
     const sliderRef = ref(null)
     const tabRef = ref(null)
+    const panelGroupRef = ref(null)
     onMounted(() => {
       _updateSliderStyle(isActive.value)
     })
@@ -50,14 +54,18 @@ export default {
         setSliderTransform(_getOffsetLeft(index))
       })
     }
-    function setSliderTransform (offset) {
+    function setSliderTransform (offsetObj) {
       const slider = sliderRef.value
-      if (typeof offset === 'number') {
-        offset = `${offset}px`
+      const panelGroup = panelGroupRef.value
+      if (typeof offsetObj.offsetLeft === 'number') {
+        offsetObj.offsetLeft = `${offsetObj.offsetLeft}px`
+        offsetObj.panelOffsetLeft = `${offsetObj.panelOffsetLeft}px`
       }
       if (slider) {
-        slider.style.transition = 'all 0.2s linear'
-        slider.style.transform = `translateX(${offset}) translateZ(0)`
+        slider.style.transition = 'all 0.3s linear'
+        slider.style.transform = `translateX(${offsetObj.offsetLeft}) translateZ(0)`
+        panelGroup.style.transition = 'all 0.3s linear'
+        panelGroup.style.transform = `translate(-${offsetObj.panelOffsetLeft}, 0) scale(1) translateZ(0)`
       }
     }
     function _getSliderWidthCurrentIndex (value) {
@@ -75,11 +83,19 @@ export default {
     }
     function _getOffsetLeft (index) {
       let offsetLeft = 0
+      let panelOffsetLeft = 0
       const child = tabRef.value.children
+      const panelChild = panelGroupRef.value.children
       props.data.forEach((tab, i) => {
-        if (i < index) offsetLeft += child[i].clientWidth
+        if (i < index) {
+          offsetLeft += child[i].clientWidth
+          panelOffsetLeft += panelChild[i].clientWidth
+        }
       })
-      return offsetLeft
+      return {
+        offsetLeft,
+        panelOffsetLeft
+      }
     }
     function handleClick (value) {
       isActive.value = value
@@ -90,7 +106,8 @@ export default {
       handleClick,
       isActive,
       sliderRef,
-      tabRef
+      tabRef,
+      panelGroupRef
     }
   }
 }
@@ -123,10 +140,13 @@ export default {
       width: 20px;
       background-color: $tab-slider-bgc;
    }
-   .lity-tab-panel{
+   .lity-tab-panels{
       position: relative;
-      width: 100%;
-      margin: 0 auto;
+      padding-top:10px;
       overflow: hidden;
+     &-group{
+        display: flex;
+        transition: all .4s linear;
+     }
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="lity-tab-item">
+    <div class="lity-tab-panels-item">
         <slot></slot>
     </div>
 </template>
@@ -13,4 +13,8 @@ export default {
 </script>
 
 <style lang="scss" >
+.lity-tab-panels-item{
+    width: 100%;
+    flex: 1 0 auto;
+}
 </style>

@@ -34,11 +34,11 @@ app.use(Button);</code>
 <div class="code-pre" v-highlight>
 <pre>
 <code>&lt;lity-button&gt;按钮&lt;/lity-button&gt;
-&lt;lity-button :type="submit"&gt;提交按钮&lt;/lity-button&gt;</code>
+&lt;lity-button type="submit"&gt;提交按钮&lt;/lity-button&gt;</code>
 </pre>
 </div>
 <lity-button>按钮</lity-button>
-<lity-button :type="submit">提交按钮</lity-button>
+<lity-button type="submit">提交按钮</lity-button>
 
 <h2 class="h2">内联按钮</h2>
 <div class="doc-text">可以设置 <code class="code-tag">:inline</code> 的值为 <code class="code-tag">true</code> 展示内联按钮</div>
