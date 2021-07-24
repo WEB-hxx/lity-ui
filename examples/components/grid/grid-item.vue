@@ -55,8 +55,8 @@ export default {
 }
 </script>
 <style lang="scss">
-  @import "../assets/scss/variable.scss";
-  @import "../assets/scss/mixins.scss";
+  @import "../../assets/scss/variable.scss";
+  @import "../../assets/scss/mixins.scss";
   .lity-grids-item {
     width: 25%;
     float: left;

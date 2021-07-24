@@ -83,7 +83,7 @@ app.use(Tag);</code>
 </template>
 
 <script>
-import LityTag from '../components/tag'
+import LityTag from '../components/tag/tag'
 export default {
   components: {
     LityTag

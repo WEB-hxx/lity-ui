@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style lang="scss" >
-  @import "../assets/scss/variable.scss";
+  @import "../../assets/scss/variable.scss";
   .lity-tab {
     position: relative;
     display: flex;

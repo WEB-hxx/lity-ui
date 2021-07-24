@@ -62,7 +62,7 @@ app.use(Toast);</code>
 </template>
 
 <script>
-import LityButton from '../components/button'
+import LityButton from '../components/button/button'
 import Toast from '../components/toast/index'
 export default {
   components: {

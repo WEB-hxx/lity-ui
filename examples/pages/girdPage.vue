@@ -143,8 +143,8 @@ Vue3 是通过 <code class="code-tag">template v-slot:icon</code> 自定义图�
 </template>
 <script>
 
-import LityGrid from '../components/grid'
-import LityGridItem from '../components/grid-item'
+import LityGrid from '../components/grid/grid'
+import LityGridItem from '../components/grid/grid-item'
 import Toast from '../components/toast/index'
 
 export default {

@@ -51,7 +51,7 @@ app.use(Loading);</code>
 </div>
 </template>
 <script>
-import LityLoading from '../components/loading'
+import LityLoading from '../components/loading/loading'
 export default {
   components: {
     LityLoading

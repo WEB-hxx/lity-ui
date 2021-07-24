@@ -103,8 +103,8 @@ export default {
 
 <script>
 import { ref, reactive } from 'vue'
-import LityTab from '../components/tab'
-import LityPanel from '../components/tab-panel'
+import LityTab from '../components/tab/tab'
+import LityPanel from '../components/tab/tab-panel'
 export default {
   components: {
     LityTab,

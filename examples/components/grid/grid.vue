@@ -27,8 +27,8 @@ export default {
 }
 </script>
 <style lang="scss">
-  @import "../assets/scss/variable.scss";
-  @import "../assets/scss/mixins.scss";
+  @import "../../assets/scss/variable.scss";
+  @import "../../assets/scss/mixins.scss";
   @mixin m-grids() {
     overflow: hidden;
     position: relative;

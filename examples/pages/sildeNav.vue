@@ -17,9 +17,12 @@
             <router-link class="tab-link" to="/tag">标签 Tag</router-link>
        </div>
        <div class="lity-nav__title">表单</div>
+       <div class="lity-nav__item">
+            <router-link class="tab-link" to="/checkbox">复选框 chckbox</router-link>
+       </div>
        <div class="lity-nav__title">滚动</div>
        <div class="lity-nav__item">
-            <router-link class="tab-link" to="/tab">Tab 选项卡</router-link>
+            <router-link class="tab-link" to="/tab">选项卡 Tab</router-link>
        </div>
        <div class="lity-nav__title">弹出层</div>
        <div class="lity-nav__item">

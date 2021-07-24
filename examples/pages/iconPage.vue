@@ -156,7 +156,7 @@ app.use(Icon);</code>
 </template>
 
 <script>
-import LityIcon from '../components/icon.vue'
+import LityIcon from '../components/icon/icon.vue'
 export default {
   components: {
     LityIcon

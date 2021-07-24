@@ -118,7 +118,7 @@ app.use(Button);</code>
 </template>
 
 <script>
-import LityButton from '../components/button'
+import LityButton from '../components/button/button'
 export default {
   components: {
     LityButton
