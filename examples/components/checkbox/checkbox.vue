@@ -1,17 +1,11 @@
 <template>
-    <label class="lity-checkbox">
-        <template v-if="group">
-            <input type="checkbox" v-model="model" :value="val" @change="changeHandler" :disabled="disabled" />
-        </template>
-        <template v-else>
-            <input type="checkbox"
-                   @change="changeBox(checked)"
-                   v-model="checked"
-                   :disabled="disabled"
-                   :true-value="trueValue"
-                   :false-value="falseValue"
-            />
-        </template>
+    <label class="lity-checkbox" ref="checkboxRef">
+          <input type="checkbox"
+                  @change="changeHandler(checked)"
+                  v-model="checked"
+                  :value="val"
+                  :disabled="disabled"
+          />
 
         <span class="lity-checkbox-icon" :style="iconStyles"><i :style="checkIconStyles"></i></span>
         <template v-if="!slots">
@@ -24,14 +18,11 @@
 </template>
 
 <script>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, inject } from 'vue'
 const COMPONENT_NAME = 'lity-checkbox'
 export default {
   name: COMPONENT_NAME,
   props: {
-    change: {
-      type: Function
-    },
     modelValue: {
       type: [Boolean, String, Number],
       default: false
@@ -56,37 +47,24 @@ export default {
         return ['square', 'circle'].indexOf(value) > -1
       },
       default: 'square'
-    },
-    trueValue: {
-      type: [String, Number, Boolean],
-      default: true
-    },
-    falseValue: {
-      type: [String, Number, Boolean],
-      default: false
     }
   },
   emits: ['change'],
   setup (props, context) {
     const group = ref(false)
-    const solts = ref(context.slots.default && context.slots.default())
-    // if (context.$parent.$options && context.$parent.$options.name === 'lity-checkbox-group') {
-    //   group.value = true
-    // }
-    const checked = ref(props.modelValue)
-    const slots = ref(context.slots)
-    function changeHandler () {
-      if (props.disabled) return
-      setTimeout(() => {
-        context.$parent.change(context.model)
-      }, 0)
-    }
-    function changeBox (value) {
-      context.emit('change', value)
-    }
+    const groupCheckbox = inject('groupCheckbox')
+    const slots = ref(context.slots.default && context.slots.default())
+    const checked = computed({
+      get () {
+        return groupCheckbox ? groupCheckbox.props.modelValue : props.modelValue
+      },
+      set (value) {
+        groupCheckbox ? groupCheckbox.context.emit('update:modelValue', value) : context.emit('update:modelValue', value)
+      }
+    })
     const iconStyles = computed(() => {
-      const size = (group.value ? context.$parent.size : props.size) + 'px'
-      const color = group.value ? context.$parent.color : props.color
+      const size = props.size + 'px'
+      const color = props.color
       return {
         width: size,
         height: size,
@@ -94,23 +72,22 @@ export default {
       }
     })
     const checkIconStyles = computed(() => {
-      const size = group.value ? context.$parent.size : props.size
+      const size = props.size
       return {
         width: Math.round(size / 3.2) + 'px',
         height: Math.round(size / 1.7) + 'px'
       }
     })
-    watch(() => props.modelValue, (val, old) => {
-      checked.value = val
-    })
+    function changeHandler (event) {
+      if (props.disabled) return false
+      groupCheckbox ? groupCheckbox.context.emit('change', event) : context.emit('change', event)
+    }
     return {
       changeHandler,
-      changeBox,
       iconStyles,
-      solts,
+      slots,
       group,
       checked,
-      slots,
       checkIconStyles
     }
   }

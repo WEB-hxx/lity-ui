@@ -1,55 +1,25 @@
 <template>
-    <div>
+    <div class="lity-checkbox-group">
         <slot></slot>
     </div>
 </template>
 
 <script type="text/babel">
+import { provide } from 'vue'
 const COMPONENT_NAME = 'lity-checkbox-group'
 export default {
   name: COMPONENT_NAME,
+  emits: ['change'],
   props: {
-    value: {
+    modelValue: {
       type: Array,
       default () {
         return []
       }
-    },
-    color: {
-      type: String,
-      default: '#4CD864'
-    },
-    size: {
-      type: Number,
-      default: 20
-    },
-    callback: {
-      type: Function,
-      default: () => {}
     }
   },
-  methods: {
-    updateValue () {
-      const value = this.value
-      this.childrens = this.$children.filter(item => item.$options.name === 'lity-checkbox')
-      if (this.childrens) {
-        this.childrens.forEach(child => {
-          child.model = value
-        })
-      }
-    },
-    change (val) {
-      this.callback(val)
-      this.$emit('input', val)
-    }
-  },
-  watch: {
-    value () {
-      this.updateValue()
-    }
-  },
-  mounted () {
-    this.$nextTick(this.updateValue)
+  setup (props, context) {
+    provide('groupCheckbox', { props, context })
   }
 }
 </script>
