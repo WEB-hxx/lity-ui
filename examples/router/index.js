@@ -7,6 +7,7 @@ import Toast from '../pages/toastPage.vue'
 import Tag from '../pages/tagPage.vue'
 import Tab from '../pages/tabPage.vue'
 import Checkbox from '../pages/checkboxPage.vue'
+import Radio from '../pages/radioPage.vue'
 
 const routes = [
   {
@@ -40,6 +41,10 @@ const routes = [
   {
     path: '/checkbox',
     component: Checkbox
+  },
+  {
+    path: '/radio',
+    component: Radio
   }
 ]
 

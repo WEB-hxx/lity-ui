@@ -12,10 +12,7 @@ export default {
   emits: ['change'],
   props: {
     modelValue: {
-      type: Array,
-      default () {
-        return []
-      }
+      type: [String, Number]
     },
     color: {
       type: String,
@@ -24,16 +21,10 @@ export default {
     size: {
       type: Number,
       default: 20
-    },
-    shape: {
-      validator (value) {
-        return ['square', 'circle'].indexOf(value) > -1
-      },
-      default: 'square'
     }
   },
   setup (props, context) {
-    provide('groupCheckbox', { props, context })
+    provide('groupRadio', { props, context })
   }
 }
 </script>

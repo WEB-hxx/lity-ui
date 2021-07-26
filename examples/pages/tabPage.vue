@@ -68,7 +68,7 @@ export default {
     </lity-tab>
 </div>
 
-<h2 class="h2">lity-tab Props</h2>
+<h2 class="h2">lity-tab [props]</h2>
 <table class="table">
 <thead><tr><th>参数</th> <th>说明</th><th>类型</th><th>示例</th><th>默认值</th></tr></thead>
 <tbody>
@@ -89,7 +89,7 @@ export default {
   </tr>
 </tbody>
 </table>
-<h2 class="h2">lity-panel slot</h2>
+<h2 class="h2">lity-panel [slot]</h2>
 <table class="table">
 <thead><tr><th>名称</th> <th>说明</th></tr></thead>
 <tbody>

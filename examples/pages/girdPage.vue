@@ -83,7 +83,7 @@ Vue3 是通过 <code class="code-tag">template v-slot:icon</code> 自定义图�
  </lity-grid>
 </div>
 
-<h2 class="h2">lity-grid【slot】</h2>
+<h2 class="h2">lity-grid [slot]</h2>
 <table class="table">
 <thead><tr><th>插槽名</th> <th>说明</th></tr></thead>
 <tbody>
@@ -93,7 +93,7 @@ Vue3 是通过 <code class="code-tag">template v-slot:icon</code> 自定义图�
 </tbody>
 </table>
 
-<h2 class="h2">lity-grid【props】</h2>
+<h2 class="h2">lity-grid [props]</h2>
 <table class="table">
 <thead><tr><th>参数</th> <th>说明</th><th>类型</th><th>可选项</th><th>默认值</th></tr></thead>
 <tbody>
@@ -105,7 +105,7 @@ Vue3 是通过 <code class="code-tag">template v-slot:icon</code> 自定义图�
 </tbody>
 </table>
 
-<h2 class="h2">lity-grid-item【slot】</h2>
+<h2 class="h2">lity-grid-item [slot]</h2>
 <table class="table">
 <thead><tr><th>插槽名</th> <th>说明</th></tr></thead>
 <tbody>
@@ -121,7 +121,7 @@ Vue3 是通过 <code class="code-tag">template v-slot:icon</code> 自定义图�
 </tbody>
 </table>
 
-<h2 class="h2">lity-grid-item【props】</h2>
+<h2 class="h2">lity-grid-item [props]</h2>
 <table class="table">
 <colgroup>
 <col width="10%">
@@ -136,7 +136,7 @@ Vue3 是通过 <code class="code-tag">template v-slot:icon</code> 自定义图�
     <td>type</td> <td>传 type="link" 将会解析为路由，type="a" 则解析为普通 &lt;a&gt;</td><td>String</td><td>link, a</td> <td>默认link</td>
   </tr>
   <tr><td>link</td> <td>需要跳转的URL</td><td>String || Object</td><td>-</td> <td>-</td></tr>
-  <tr><td>style</td> <td>lity-grid-item 元素自定义样式</td><td>String</td> <td>-</td></tr>
+  <tr><td>style</td> <td>lity-grid-item 元素自定义样式</td><td>String</td> <td>-</td><td>-</td></tr>
 </tbody>
 </table>
 </div>
@@ -145,20 +145,11 @@ Vue3 是通过 <code class="code-tag">template v-slot:icon</code> 自定义图�
 
 import LityGrid from '../components/grid/grid'
 import LityGridItem from '../components/grid/grid-item'
-import Toast from '../components/toast/index'
 
 export default {
   components: {
     LityGrid,
     LityGridItem
-  },
-  setup (props, content) {
-    function fff () {
-      Toast({ msg: 'dddd', time: 10000 })
-    }
-    return {
-      fff
-    }
   }
 }
 </script>

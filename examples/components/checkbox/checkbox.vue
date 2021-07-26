@@ -1,5 +1,5 @@
 <template>
-    <label class="lity-checkbox" ref="checkboxRef">
+    <label class="lity-checkbox" :class="shapeClass == 'circle' ? 'lity-checkbox-circle' : ''">
           <input type="checkbox"
                   @change="changeHandler(checked)"
                   v-model="checked"
@@ -51,9 +51,11 @@ export default {
   },
   emits: ['change'],
   setup (props, context) {
-    const group = ref(false)
     const groupCheckbox = inject('groupCheckbox')
     const slots = ref(context.slots.default && context.slots.default())
+    const shapeClass = computed(() => {
+      return groupCheckbox ? groupCheckbox.props.shape : props.shape
+    })
     const checked = computed({
       get () {
         return groupCheckbox ? groupCheckbox.props.modelValue : props.modelValue
@@ -63,8 +65,8 @@ export default {
       }
     })
     const iconStyles = computed(() => {
-      const size = props.size + 'px'
-      const color = props.color
+      const size = (groupCheckbox ? groupCheckbox.props.size : props.size) + 'px'
+      const color = groupCheckbox ? groupCheckbox.props.color : props.color
       return {
         width: size,
         height: size,
@@ -72,7 +74,7 @@ export default {
       }
     })
     const checkIconStyles = computed(() => {
-      const size = props.size
+      const size = groupCheckbox ? groupCheckbox.props.size : props.size
       return {
         width: Math.round(size / 3.2) + 'px',
         height: Math.round(size / 1.7) + 'px'
@@ -86,8 +88,8 @@ export default {
       changeHandler,
       iconStyles,
       slots,
-      group,
       checked,
+      shapeClass,
       checkIconStyles
     }
   }
@@ -144,14 +146,15 @@ export default {
     }
 
     &-text {
-        margin-left: 1px;
+        margin-left: 3px;
         font-size: 15px;
         color: $checkbox-color;
         pointer-events: none;
+        vertical-align: text-top;
     }
 
     &-circle {
-        &-icon {
+        .lity-checkbox-icon {
           border-radius: 50%;
         }
     }
