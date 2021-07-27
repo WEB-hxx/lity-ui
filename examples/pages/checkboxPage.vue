@@ -100,7 +100,7 @@ export default {
 </pre>
 </div>
 <div class="doc-text">值：{{checkbox5}}</div>
-<lity-checkbox-group color="red"  shape="circle" :size="30" v-model="checkbox5">
+<lity-checkbox-group color="red" shape="circle" :size="30" v-model="checkbox5">
     <lity-checkbox val="小米"><span style="font-size: 24px;">小米</span></lity-checkbox>
     <lity-checkbox disabled val="苹果"><span style="font-size: 24px;">苹果</span></lity-checkbox>
     <lity-checkbox val="华为"><span style="font-size: 24px;">华为</span></lity-checkbox>

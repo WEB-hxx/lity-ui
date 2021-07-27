@@ -18,6 +18,9 @@
        </div>
        <div class="lity-nav__title">表单</div>
        <div class="lity-nav__item">
+            <router-link class="tab-link" to="/input">输入框 input</router-link>
+       </div>
+       <div class="lity-nav__item">
             <router-link class="tab-link" to="/radio">单选框 radio</router-link>
        </div>
        <div class="lity-nav__item">

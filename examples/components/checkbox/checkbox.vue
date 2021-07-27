@@ -49,9 +49,9 @@ export default {
       default: 'square'
     }
   },
-  emits: ['change'],
+  emits: ['change', 'update:modelValue'],
   setup (props, context) {
-    const groupCheckbox = inject('groupCheckbox')
+    const groupCheckbox = inject('groupCheckbox', '')
     const slots = ref(context.slots.default && context.slots.default())
     const shapeClass = computed(() => {
       return groupCheckbox ? groupCheckbox.props.shape : props.shape

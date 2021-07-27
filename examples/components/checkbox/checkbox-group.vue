@@ -9,7 +9,7 @@ import { provide } from 'vue'
 const COMPONENT_NAME = 'lity-checkbox-group'
 export default {
   name: COMPONENT_NAME,
-  emits: ['change'],
+  emits: ['change', 'update:modelValue'],
   props: {
     modelValue: {
       type: Array,

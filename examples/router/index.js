@@ -8,6 +8,7 @@ import Tag from '../pages/tagPage.vue'
 import Tab from '../pages/tabPage.vue'
 import Checkbox from '../pages/checkboxPage.vue'
 import Radio from '../pages/radioPage.vue'
+import Input from '../pages/inputPage.vue'
 
 const routes = [
   {
@@ -45,6 +46,10 @@ const routes = [
   {
     path: '/radio',
     component: Radio
+  },
+  {
+    path: '/input',
+    component: Input
   }
 ]
 
