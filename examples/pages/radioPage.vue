@@ -156,7 +156,7 @@ export default {
     <td>v-model</td> <td>绑定值</td><td>string / number</td> <td> - </td><td>-</td>
   </tr>
   <tr>
-    <td>color</td> <td>选中单选框的颜色</td><td>String && 常规颜色值</td> <td> - </td><td>#000</td>
+    <td>color</td> <td>选中单选框的颜色</td><td>String && 常规颜色值</td> <td> - </td><td>#07c160</td>
   </tr>
   <tr>
     <td>size</td> <td>单选框的大小</td><td>Number</td> <td>-</td><td>20</td>

@@ -19,6 +19,7 @@
 
 <script>
 import { ref, computed, inject } from 'vue'
+import { isColor } from '../../assets/js/common'
 const COMPONENT_NAME = 'lity-checkbox'
 export default {
   name: COMPONENT_NAME,
@@ -35,7 +36,10 @@ export default {
       default: false
     },
     color: {
-      type: String,
+      validator (value) {
+        if (!value) return true
+        return isColor(value)
+      },
       default: '#07c160'
     },
     size: {

@@ -6,6 +6,7 @@
 
 <script type="text/babel">
 import { provide } from 'vue'
+import { isColor } from '../../assets/js/common'
 const COMPONENT_NAME = 'lity-checkbox-group'
 export default {
   name: COMPONENT_NAME,
@@ -15,7 +16,10 @@ export default {
       type: [String, Number]
     },
     color: {
-      type: String,
+      validator (value) {
+        if (!value) return true
+        return isColor(value)
+      },
       default: '#07c160'
     },
     size: {

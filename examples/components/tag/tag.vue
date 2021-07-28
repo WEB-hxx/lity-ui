@@ -7,6 +7,7 @@
 </template>
 
 <script >
+import { isColor } from '../../assets/js/common'
 import { computed } from 'vue'
 const COMPONENT_NAME = 'lity-tag'
 export default {
@@ -24,7 +25,11 @@ export default {
       default: 'circle'
     },
     color: {
-      type: String
+      validator (value) {
+        if (!value) return true
+        return isColor(value)
+      },
+      default: 'inherit'
     },
     scale: {
       type: Number,

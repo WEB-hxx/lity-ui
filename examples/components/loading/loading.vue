@@ -6,6 +6,7 @@
   </div>
 </template>
 <script>
+import { isColor } from '../../assets/js/common'
 import { ref, computed } from 'vue'
 const COMPONENT_NAME = 'lity-loading'
 export default {
@@ -15,7 +16,11 @@ export default {
       type: Number
     },
     color: {
-      type: String
+      validator (value) {
+        if (!value) return true
+        return isColor(value)
+      },
+      default: 'inherit'
     }
   },
   setup (props) {

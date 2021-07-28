@@ -20,6 +20,12 @@
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/input">输入框 input</router-link>
        </div>
+      <div class="lity-nav__item">
+            <router-link class="tab-link" to="/textarea">文本框 textarea</router-link>
+       </div>
+      <div class="lity-nav__item">
+            <router-link class="tab-link" to="/switch">开关 switch</router-link>
+       </div>
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/radio">单选框 radio</router-link>
        </div>

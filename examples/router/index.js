@@ -9,6 +9,8 @@ import Tab from '../pages/tabPage.vue'
 import Checkbox from '../pages/checkboxPage.vue'
 import Radio from '../pages/radioPage.vue'
 import Input from '../pages/inputPage.vue'
+import Switch from '../pages/switchPage.vue'
+import TextArea from '../pages/TextAreaPage.vue'
 
 const routes = [
   {
@@ -50,6 +52,14 @@ const routes = [
   {
     path: '/input',
     component: Input
+  },
+  {
+    path: '/switch',
+    component: Switch
+  },
+  {
+    path: '/textarea',
+    component: TextArea
   }
 ]
 

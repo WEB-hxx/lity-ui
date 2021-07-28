@@ -35,7 +35,7 @@ export default {
 <div class="doc-text">值：{{checkbox1}}</div>
 <lity-checkbox v-model="checkbox1">我单个复选框</lity-checkbox>
 <h2 class="h2">圆形复选框</h2>
-<div class="doc-text">将 <code class="code-tag">lity-checkbox</code> 组件的传入 <code class="code-tag">shape="circle"</code>即可展示圆形，默认是方形，也可以自定义颜色，传入 <code class="code-tag">color="#xxx"</code>, <b>注意</b>, 写入的颜色字符串必须符号颜色值的规则，否则显示黑色。</div>
+<div class="doc-text">将 <code class="code-tag">lity-checkbox</code> 组件的传入 <code class="code-tag">shape="circle"</code>即可展示圆形，默认是方形，也可以自定义颜色，传入 <code class="code-tag">color="#xxx"</code>, <b>注意</b>, 写入的颜色字符串必须符号颜色值的规则，否则显示默认的。</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>&lt;lity-checkbox color="#f00" shape="circle" v-model="checkbox1"&gt;我是圆形有颜色的&lt;/lity-checkbox&gt;</code>
@@ -123,7 +123,7 @@ export default {
     <td>v-model</td> <td>绑定值</td><td>string / number / boolean</td> <td> - </td><td>-</td>
   </tr>
   <tr>
-    <td>color</td> <td>选中复选框的颜色</td><td>String && 常规颜色值</td> <td> - </td><td>#000</td>
+    <td>color</td> <td>选中复选框的颜色</td><td>String && 常规颜色值</td> <td> - </td><td>#07c160</td>
   </tr>
    <tr>
     <td>shape</td> <td>复选框圆形和方形</td><td>String</td> <td><code class="code-tag">circle</code>, <code class="code-tag">square</code></td><td>square</td>
