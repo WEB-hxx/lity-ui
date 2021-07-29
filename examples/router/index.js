@@ -11,6 +11,7 @@ import Radio from '../pages/radioPage.vue'
 import Input from '../pages/inputPage.vue'
 import Switch from '../pages/switchPage.vue'
 import TextArea from '../pages/TextAreaPage.vue'
+import Slider from '../pages/sliderPage.vue'
 
 const routes = [
   {
@@ -60,6 +61,10 @@ const routes = [
   {
     path: '/textarea',
     component: TextArea
+  },
+  {
+    path: '/slider',
+    component: Slider
   }
 ]
 

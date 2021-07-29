@@ -30,7 +30,9 @@
 </template>
 <script>
 import { ref, computed } from 'vue'
+const COMPONENT_NAME = 'lity-input'
 export default {
+  name: COMPONENT_NAME,
   emits: ['change', 'blur', 'focus', 'clear', 'update:modelValue'],
   props: {
     modelValue: [String, Number],

@@ -36,6 +36,9 @@
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/tab">选项卡 Tab</router-link>
        </div>
+       <div class="lity-nav__item">
+            <router-link class="tab-link" to="/slider">轮播图 Slider</router-link>
+       </div>
        <div class="lity-nav__title">弹出层</div>
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/toast">轻提示 Toast</router-link>
