@@ -1,5 +1,9 @@
 <template>
    <div class="lity-nav">
+       <div class="lity-nav__title">开发</div>
+       <div class="lity-nav__item">
+           <router-link class="tab-link" to="/quickstart">快速开始</router-link>
+       </div>
        <div class="lity-nav__title">基础</div>
        <div class="lity-nav__item">
            <router-link class="tab-link" to="/button">按钮 Button</router-link>

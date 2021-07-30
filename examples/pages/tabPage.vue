@@ -13,12 +13,12 @@ app.use(Tab).use(TabPanel);</code>
 </div>
   <h2 class="h2">基础用法</h2>
 <div class="doc-text">传入如下 <code class="code-tag">:data</code> 的数据结构便能初始化 <code class="code-tag">lity-tab</code>，
-必须使用 <code class="code-tag">:value</code> 指令来选中对应的 <code class="code-tag">tab</code> 选中的高亮项， <code class="code-tag">:value</code> 的参数的值必须与某一项 <code class="code-tag">tab</code> 的 <code class="code-tag">label</code> 属性对应，<code class="code-tag">showSlider</code> 是开启下划线跟随的效果。</div>
-<div><code class="code-tag">lity-panel</code>必须与<code class="code-tag">lity-tab</code>一起使用才能生效。</div>
+使用 <code class="code-tag">v-model</code> 指令来绑定初始化对应的 <code class="code-tag">tab</code> 选中的高亮项， <code class="code-tag">v-model</code> 的值必须与某一项 <code class="code-tag">tab</code> 的 <code class="code-tag">label</code> 属性对应，<code class="code-tag">showSlider</code> 是开启有下划线跟随的效果。</div>
+<div><code class="code-tag">lity-panel</code>须与<code class="code-tag">lity-tab</code>一起使用才能生效。</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>&lt;template&gt;
-  &lt;lity-tab :data="data" showSlider :value="selectedVal" @click="handClick"&gt;
+  &lt;lity-tab :data="data" showSlider v-model="selectedVal" @click="handClick"&gt;
      &lt;lity-panel v-for="(item,index) in data" :key="index"&gt;
         &lt;ul&gt;
           &lt;li v-for="hero in item.panelData" :key="hero"&gt;{{hero}}&lt;/li&gt;
@@ -59,7 +59,7 @@ export default {
 </pre>
 </div>
 <div style="width:500px">
-    <lity-tab :data="data" showSlider :value="selectedVal" @click="hand">
+    <lity-tab :data="data" showSlider v-model="selectedVal" @click="hand">
       <lity-panel v-for="item in data" :key="item.lable">
         <ul>
           <li v-for="hero in item.panelData" :key="hero">{{hero}}</li>
@@ -74,6 +74,9 @@ export default {
 <tbody>
   <tr>
     <td>data</td> <td>定义的 <code class="code-tag">data</code> 数组里必须含有 <code class="code-tag">lable</code> 字段，否则不显示</td><td>Array</td> <td>[{label: 1, paneldata:[1,2]}， {label: 2, paneldata:[3,2]}]</td><td>-</td>
+  </tr>
+   <tr>
+    <td>v-model</td> <td>绑定初始化绑定的选项</td><td>Boolean</td> <td><code class="code-tag">-</code></td><td>-</td>
   </tr>
    <tr>
     <td>showSlider</td> <td>是否开启下划线跟随效果</td><td>Boolean</td> <td><code class="code-tag">true/false</code></td><td>false</td>

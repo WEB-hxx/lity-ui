@@ -12,8 +12,18 @@ import Input from '../pages/inputPage.vue'
 import Switch from '../pages/switchPage.vue'
 import TextArea from '../pages/TextAreaPage.vue'
 import Slider from '../pages/sliderPage.vue'
+import QuickStart from '../pages/quickPage.vue'
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/quickstart',
+    component: QuickStart
+  },
+  {
+    path: '/quickstart',
+    component: QuickStart
+  },
   {
     path: '/button',
     component: Button

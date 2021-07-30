@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, onMounted, computed, nextTick } from 'vue'
 const COMPONENT_NAME = 'lity-tab'
 export default {
   name: COMPONENT_NAME,
-  emits: ['click'],
+  emits: ['click', 'update:modelValue'],
   props: {
     data: {
       type: Array,
@@ -29,7 +29,7 @@ export default {
         return []
       }
     },
-    value: {
+    modelValue: {
       type: [String, Number]
     },
     showSlider: {
@@ -37,19 +37,26 @@ export default {
       default: false
     }
   },
-  setup (props, content) {
-    const isActive = ref(props.value)
+  setup (props, context) {
     const sliderRef = ref(null)
     const tabRef = ref(null)
     const panelGroupRef = ref(null)
     onMounted(() => {
-      _updateSliderStyle(isActive.value)
+      _updateSliderStyle()
     })
-    function _updateSliderStyle (value) {
+    const isActive = computed({
+      get () {
+        return props.modelValue
+      },
+      set (value) {
+        context.emit('update:modelValue', value)
+      }
+    })
+    function _updateSliderStyle () {
       if (!props.showSlider) return
       const slider = sliderRef.value
       nextTick(() => {
-        const { width, index } = _getSliderWidthCurrentIndex(value)
+        const { width, index } = _getSliderWidthCurrentIndex()
         slider.style.width = `${width}px`
         setSliderTransform(_getOffsetLeft(index))
       })
@@ -62,18 +69,19 @@ export default {
         offsetObj.panelOffsetLeft = `${offsetObj.panelOffsetLeft}px`
       }
       if (slider) {
-        slider.style.transition = 'all 0.3s linear'
+        const linear = 'all 0.3s linear'
+        slider.style.transition = linear
         slider.style.transform = `translateX(${offsetObj.offsetLeft}) translateZ(0)`
-        panelGroup.style.transition = 'all 0.3s linear'
+        panelGroup.style.transition = linear
         panelGroup.style.transform = `translate(-${offsetObj.panelOffsetLeft}, 0) scale(1) translateZ(0)`
       }
     }
-    function _getSliderWidthCurrentIndex (value) {
+    function _getSliderWidthCurrentIndex () {
       let width = 0
       let index = 0
       const child = tabRef.value.children
       if (props.data.length > 0) {
-        index = props.data.findIndex((tab) => tab.label === value)
+        index = props.data.findIndex((tab) => tab.label === isActive.value)
         width = child[index].clientWidth
       }
       return {
@@ -99,8 +107,8 @@ export default {
     }
     function handleClick (value) {
       isActive.value = value
-      _updateSliderStyle(value)
-      content.emit('click', value)
+      _updateSliderStyle()
+      context.emit('click', isActive.value)
     }
     return {
       handleClick,
