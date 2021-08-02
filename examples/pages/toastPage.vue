@@ -73,7 +73,7 @@ export default {
       Toast({ msg: '我是一个轻提示！' })
     }
     function ToastClick2 () {
-      Toast({ msg: '我是有自定义图标的提示！', img_url: 'https://b.yzcdn.cn/vant/logo/github.svg', time: 3000 })
+      Toast({ msg: '我是有自定义图标的提示！', imgurl: 'https://b.yzcdn.cn/vant/logo/github.svg', time: 3000 })
     }
     return {
       ToastClick,

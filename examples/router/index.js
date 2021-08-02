@@ -13,6 +13,7 @@ import Switch from '../pages/switchPage.vue'
 import TextArea from '../pages/TextAreaPage.vue'
 import Slider from '../pages/sliderPage.vue'
 import QuickStart from '../pages/quickPage.vue'
+import Rate from '../pages/ratePage.vue'
 
 const routes = [
   {
@@ -71,6 +72,10 @@ const routes = [
   {
     path: '/textarea',
     component: TextArea
+  },
+  {
+    path: '/rate',
+    component: Rate
   },
   {
     path: '/slider',

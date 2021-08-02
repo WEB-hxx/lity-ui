@@ -47,7 +47,7 @@ export default {
 .h1{
   font-size: 36px;
   color: #333;
-  padding: 20px 20px 50px 20px;
+  padding: 20px 20px 50px 0;
 }
 .h2{
   padding-left: 8px;
