@@ -102,18 +102,11 @@ $checker-item-disabled-bgc : $color-light-grey-ss;
 // dialog
 $dialog-color : $color-grey;
 $dialog-bgc : $color-white;
-$dialog-icon-color : $color-regular-blue;
-$dialog-icon-bgc : $color-background;
-$dialog-title-color : $color-dark-grey;
-$dialog-close-color : $color-light-grey;
-$dialog-btn-color : $color-light-grey;
-$dialog-btn-bgc : $color-white;
-$dialog-btn-active-bgc : $color-light-grey-opacity;
-$dialog-btn-highlight-color : $color-green;
-$dialog-btn-highlight-active-bgc : $color-light-green-opacity;
-$dialog-btn-disabled-color : $color-light-grey;
+$dialog-btn-active-bgc :$color-dark-grey-opacity;
 $dialog-btn-disabled-active-bgc : transparent;
 $dialog-btns-split-color : $color-row-line;
+$dialog-title : $color-dark-grey;
+$dialog-content : $color-grey;
 
 // index-list
 $index-list-bgc : $color-white;

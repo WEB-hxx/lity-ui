@@ -83,7 +83,6 @@ export default {
 }
 </script>
 <style lang="scss">
- @import "../../assets/scss/variable.scss";
  .lity-rate{
     display: flex;
     align-items: center;

@@ -50,6 +50,9 @@
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/toast">轻提示 Toast</router-link>
        </div>
+        <div class="lity-nav__item">
+            <router-link class="tab-link" to="/dialog">模态框 Dialog</router-link>
+       </div>
    </div>
 </template>
 

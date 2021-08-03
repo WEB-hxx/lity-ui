@@ -14,6 +14,7 @@ import TextArea from '../pages/TextAreaPage.vue'
 import Slider from '../pages/sliderPage.vue'
 import QuickStart from '../pages/quickPage.vue'
 import Rate from '../pages/ratePage.vue'
+import Dialog from '../pages/dialogPage.vue'
 
 const routes = [
   {
@@ -80,6 +81,10 @@ const routes = [
   {
     path: '/slider',
     component: Slider
+  },
+  {
+    path: '/dialog',
+    component: Dialog
   }
 ]
 
