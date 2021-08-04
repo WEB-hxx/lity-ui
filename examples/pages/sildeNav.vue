@@ -36,6 +36,9 @@
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/checkbox">复选框 chckbox</router-link>
        </div>
+        <div class="lity-nav__item">
+            <router-link class="tab-link" to="/select">选择框 select</router-link>
+       </div>
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/rate">评分 rate</router-link>
        </div>

@@ -43,7 +43,7 @@ app.use(Toast);</code>
 </div>
 <lity-button :success="true" @click="ToastClick2">我是有自定义图标的提示</lity-button>
 
-<h2 class="h2">Props 配置</h2>
+<h2 class="h2">Toast 参数配置</h2>
 <table class="table">
 <thead><tr><th>参数</th> <th>说明</th><th>类型</th><th>默认值</th></tr></thead>
 <tbody>

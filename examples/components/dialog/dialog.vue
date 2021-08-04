@@ -4,45 +4,36 @@
          <div class="lity-dialog-title" v-html="title"></div>
          <div class="lity-dialog-content" v-html="content"></div>
         <div class="lity-dialog-footer" v-if="type==='confirm'">
-            <a class="lity-dialog-btn" @click.stop="closeConfirm(false)">取消</a>
-            <a class="lity-dialog-btn" @click.stop="closeConfirm(false, confirm)">确认</a>
+            <a class="lity-dialog-btn" @click.stop="closeConfirm(status)">取消</a>
+            <a class="lity-dialog-btn" @click.stop="closeConfirm(status, confirm)">确认</a>
         </div>
         <div class="lity-dialog-footer" v-if="type==='alert'">
-            <a class="lity-dialog-btn" @click.stop="closeConfirm(false, confirm)">确认</a>
+            <a class="lity-dialog-btn" @click.stop="closeConfirm(status, confirm)">确认</a>
         </div>
     </div>
 </div>
 </template>
 <script>
-import { provide } from 'vue'
+import { ref } from 'vue'
 const COMPONENT_NAME = 'lity-dialog'
 export default {
   name: COMPONENT_NAME,
-  props: {
-    type: {
-      type: String,
-      default: 'confirm'
-    },
-    title: {
-      type: String,
-      default: '温馨提示'
-    },
-    content: {
-      type: String,
-      default: ''
-    },
-    confirm: {
-      type: [Array, Function],
-      default: () => {
-      }
-    }
-  },
   setup (props) {
+    const status = ref(false)
+    const type = ref('confirm')
+    const title = ref('温馨提示')
+    const content = ref('')
+    const confirm = ref(() => {})
     function closeConfirm (state, opts) {
-      provide('closeConfirm', { state, opts })
+
     }
     return {
-      closeConfirm
+      closeConfirm,
+      status,
+      type,
+      title,
+      content,
+      confirm
     }
   }
 }

@@ -15,6 +15,7 @@ import { computed } from 'vue'
 const COMPONENT_NAME = 'lity-button'
 export default {
   name: COMPONENT_NAME,
+  emits: ['click'],
   props: {
     icon: {
       type: String,

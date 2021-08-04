@@ -11,25 +11,77 @@ const app = createApp();
 app.use(Dialog);</code>
 </pre>
 </div>
-<div @click="hanlder">Comp</div>
-<h2 class="h2">Props 配置</h2>
+<h2 class="h2">Alert 框</h2>
+<div class="doc-text">这是一个 <code class="code-tag">Alert</code> 框，需要转入 <code class="code-tag">type: 'alert'</code> </div>
+<div class="code-pre" v-highlight>
+<pre>
+<code>&lt;template&gt;&lt;button @click="hanlder"&gt;点击我&lt;/button&gt;&lt;/template&gt;
+&lt;script&gt;
+export default {
+  setup (props) {
+    function hanlder () {
+      Dialog({
+        type: 'alert',
+        title: '我是标题',
+        content: '我是Alert内容啦'
+      })
+    }
+    return {
+      hanlder
+    }
+  }
+}
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<lity-button @click.stop="hanlder1">点击我</lity-button>
+
+<h2 class="h2">confirm 框</h2>
+<div class="doc-text">这是一个 <code class="code-tag">confirm</code> 框，需要转入 <code class="code-tag">type: 'confirm'</code> </div>
+<div class="code-pre" v-highlight>
+<pre>
+<code>&lt;template&gt;&lt;button @click="hanlder"&gt;点击我confirm&lt;/button&gt;&lt;/template&gt;
+&lt;script&gt;
+export default {
+  setup (props) {
+    function hanlder () {
+      Dialog({
+        type: 'confirm',
+        title: '我是标题',
+        content: '&lt;div style="color:red"&gt;我是confirm框&lt;/div&gt;',
+        confirm: ()=>{
+          alert('点击确定，我执行了')
+        }
+      })
+    }
+    return {
+      hanlder
+    }
+  }
+}
+&lt;/script&gt;
+</code>
+</pre>
+</div>
+
+<lity-button @click.stop="hanlder2">点击我confirm</lity-button>
+<h2 class="h2">Dialog 参数配置</h2>
 <table class="table">
 <thead><tr><th>参数</th> <th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></tr></thead>
 <tbody>
   <tr>
-    <td>type</td> <td>标签的类型颜色</td><td>String</td> <td><code class="code-tag">primary</code>, <code class="code-tag">success</code><code class="code-tag">danger</code><code class="code-tag">warning</code> </td><td>-</td>
+    <td>type</td> <td>模态框类型</td><td>String</td> <td><code class="code-tag">alert</code><code class="code-tag">confirm</code> </td><td>confirm</td>
   </tr>
    <tr>
-    <td>shape</td> <td>标签的圆形和方形</td><td>String</td> <td><code class="code-tag">circle</code>, <code class="code-tag">square</code></td><td>-</td>
+    <td>title</td> <td>模态框标题</td><td>String</td> <td>-</td><td>温馨提示</td>
   </tr>
   <tr>
-    <td>color</td> <td>自定义标签的字体颜色</td><td>String && 常规颜色值</td> <td>-</td><td>-</td>
+    <td>content</td> <td>模态框内容，支持HTML字符串</td><td>String</td> <td>-</td><td>-</td>
   </tr>
    <tr>
-    <td>bgcolor</td> <td>自定义标签的背景颜色</td><td>String && 常规颜色值</td> <td>-</td><td>-</td>
-  </tr>
-  <tr>
-    <td>scale</td> <td>自定义标签的缩放大小</td><td>String</td> <td>-</td><td>1</td>
+    <td>confirm</td> <td>点击确定按钮的回调方法</td><td>Function</td> <td>-</td><td>-</td>
   </tr>
 </tbody>
 </table>
@@ -37,14 +89,33 @@ app.use(Dialog);</code>
 </template>
 
 <script>
+import LityButton from '../components/button/button'
 import Dialog from '../components/dialog/index'
 export default {
+  components: {
+    LityButton
+  },
   setup (props) {
-    function hanlder () {
-      Dialog()
+    function hanlder1 (e) {
+      Dialog({
+        type: 'alert',
+        title: '我是标题',
+        content: '我是Alert内容啦'
+      })
+    }
+    function hanlder2 () {
+      Dialog({
+        type: 'confirm',
+        title: '我是标题',
+        content: '<div style="color:red">我是confirm框</div>',
+        confirm: () => {
+          alert('点击确定，我执行了')
+        }
+      })
     }
     return {
-      hanlder
+      hanlder1,
+      hanlder2
     }
   }
 }
