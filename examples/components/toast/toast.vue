@@ -8,7 +8,7 @@
 </template>
 
 <script>
-const COMPONENT_NAME = 'toast'
+const COMPONENT_NAME = 'lity-toast'
 export default {
   name: COMPONENT_NAME,
   data () {
@@ -24,6 +24,7 @@ export default {
 
 <style lang="scss">
   @import "../../assets/scss/variable.scss";
+  @import "../../assets/scss/mixins.scss";
   .lity-toast{
      position: fixed;
      top: 50%;
@@ -53,15 +54,6 @@ export default {
     &_msg{
       font-size: 13px;
       color: $color-white;
-    }
-  }
-  @keyframes lity-zoom-in {
-    from {
-      opacity: 0;
-      transform: scale3d(.3, .3, .3);
-    }
-    50% {
-      opacity: 1;
     }
   }
 </style>

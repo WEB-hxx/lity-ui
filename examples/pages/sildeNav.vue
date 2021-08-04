@@ -36,6 +36,12 @@
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/checkbox">复选框 chckbox</router-link>
        </div>
+        <div class="lity-nav__item">
+            <router-link class="tab-link" to="/select">选择框 select</router-link>
+       </div>
+       <div class="lity-nav__item">
+            <router-link class="tab-link" to="/rate">评分 rate</router-link>
+       </div>
        <div class="lity-nav__title">滚动</div>
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/tab">选项卡 Tab</router-link>
@@ -46,6 +52,9 @@
        <div class="lity-nav__title">弹出层</div>
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/toast">轻提示 Toast</router-link>
+       </div>
+        <div class="lity-nav__item">
+            <router-link class="tab-link" to="/dialog">模态框 Dialog</router-link>
        </div>
    </div>
 </template>

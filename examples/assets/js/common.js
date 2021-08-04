@@ -5,4 +5,23 @@ const isColor = function (value) {
   return colorReg.test(value) || rgbaReg.test(value) || rgbReg.test(value)
 }
 
-export { isColor }
+const isLock = (function () {
+  const fn = function (e) {
+    e.preventDefault()
+    e.stopPropagation()
+  }
+  let islock = false
+  return {
+    lock (el) {
+      if (islock) return
+      islock = true;
+      (el || document).addEventListener('touchmove', fn)
+    },
+    unlock (el) {
+      islock = false;
+      (el || document).removeEventListener('touchmove', fn)
+    }
+  }
+})()
+
+export { isColor, isLock }
