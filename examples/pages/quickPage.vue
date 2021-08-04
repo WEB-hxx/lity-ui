@@ -41,6 +41,8 @@ app.use(Button);</code>
 </pre>
 </div>
 <div class="doc-text"><strong style="font-weight: 800;">注意：</strong> 按需引入的话，是不会打包基础样式部分的，所以在使用的时候需要引入 style 模块。</div>
+<h2 class="h2">版本</h2>
+<div class="doc-text">版本：<code class="code-tag">v1.0.0 beta</code> 目前在公测中，版本随着组件的添加修改会不断频繁更新版本，直接在真实项目中使用还需谨慎。</div>
 
 <h2 class="h2">参与</h2>
 <div class="doc-text">使用本项目，意味着你也有义务帮助其变得更好，请大胆奉献你的代码。</div>

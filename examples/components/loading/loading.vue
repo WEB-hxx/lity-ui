@@ -20,7 +20,7 @@ export default {
         if (!value) return true
         return isColor(value)
       },
-      default: 'inherit'
+      default: '#666'
     }
   },
   setup (props) {

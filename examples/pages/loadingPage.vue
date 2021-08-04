@@ -19,7 +19,7 @@ app.use(Loading);</code>
 <code>&lt;lity-loading /&gt;</code>
 </pre>
 </div>
-<LityLoading></LityLoading>
+<lity-loading></lity-loading>
 <h2 class="h2">loading 大小</h2>
 <div class="doc-text">可以设置 <code class="code-tag">size</code> 数字类型的值来展示 loading 大小</div>
 <div class="code-pre" v-highlight>
@@ -27,7 +27,7 @@ app.use(Loading);</code>
 <code>&lt;lity-loading :size="40" /&gt;</code>
 </pre>
 </div>
-<LityLoading :size="40"></LityLoading>
+<lity-loading :size="40"></lity-loading>
 <h2 class="h2">loading 颜色</h2>
 <div class="doc-text">可以设置 <code class="code-tag">color</code> 背景颜色的值来展示 loading 颜色</div>
 <div class="code-pre" v-highlight>
@@ -35,7 +35,7 @@ app.use(Loading);</code>
 <code>&lt;lity-loading :size="40" color="#f0f" /&gt;</code>
 </pre>
 </div>
-<LityLoading :size="40" color="#f0f"></LityLoading>
+<lity-loading :size="40" color="#f0f"></lity-loading>
 <h2 class="h2">Props 配置</h2>
 <table class="table">
 <thead><tr><th>参数</th> <th>说明</th><th>类型</th><th>默认值</th></tr></thead>
@@ -44,7 +44,7 @@ app.use(Loading);</code>
     <td>size</td> <td>loading 的大小</td><td>Number</td> <td>24(单位px)</td>
   </tr>
    <tr>
-    <td>color</td> <td>loading 的颜色</td><td>String</td>  <td>-</td>
+    <td>color</td> <td>loading 的颜色</td><td>String && 常规颜色值</td>  <td>#666</td>
   </tr>
 </tbody>
 </table>
