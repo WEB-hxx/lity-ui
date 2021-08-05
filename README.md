@@ -4,12 +4,13 @@
           <img width="200" src="https://cn.vuejs.org/images/logo.svg">
     </a>
     <br>
+    <span style="font-size:50px;font-weight:bold">一只基于Vue3.x的移动端UI。 -LITYUI Touch</span>
 </p>
 <br/>
 
-#### 一只基于Vue3.x的移动端UI。 -LITYUI Touch
+#### 参考文档
 
-中文文档: <a href="https://web-hxx.github.io/lity-ui"> https://web-hxx.github.io/lity-ui </a>  
+Docs: <a href="https://web-hxx.github.io/lity-ui"> https://web-hxx.github.io/lity-ui </a>  
 
 
 #### NPM 安装
