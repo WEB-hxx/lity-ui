@@ -7,8 +7,8 @@ module.exports = {
       filename: 'index.html'
     }
   },
-  outputDir: 'lity-ui',
-  publicPath: '/lity-ui',
+  // outputDir: 'lity-ui',
+  // publicPath: '/lity-ui',
   chainWebpack: config => {
     config.module
       .rule('js')
