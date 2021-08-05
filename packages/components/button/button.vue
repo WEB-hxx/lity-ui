@@ -15,6 +15,7 @@ import { computed } from 'vue'
 const COMPONENT_NAME = 'lity-button'
 export default {
   name: COMPONENT_NAME,
+  emits: ['click'],
   props: {
     icon: {
       type: String,
@@ -94,8 +95,8 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../assets/scss/variable.scss";
-  @import "../assets/scss/mixins.scss";
+  @import "../../assets/scss/variable.scss";
+  @import "../../assets/scss/mixins.scss";
   @mixin btn-active($bg, $border:null){
      &.lity-btn_active, &:active{
         background: $bg;

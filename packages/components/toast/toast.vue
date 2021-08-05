@@ -1,19 +1,19 @@
 <template>
 <div class="lity-toast">
   <div class="lity-toast_wrap">
-    <img class="lity-toast_img" v-if="img_url" :src="img_url" alt="图标" />
+    <img class="lity-toast_img" v-if="imgurl" :src="imgurl" alt="图标" />
     <p class="lity-toast_msg">{{msg}}</p>
   </div>
 </div>
 </template>
 
 <script>
-const COMPONENT_NAME = 'toast'
+const COMPONENT_NAME = 'lity-toast'
 export default {
   name: COMPONENT_NAME,
   data () {
     return {
-      img_url: '',
+      imgurl: '',
       msg: '',
       time: 3000
     }
@@ -24,6 +24,7 @@ export default {
 
 <style lang="scss">
   @import "../../assets/scss/variable.scss";
+  @import "../../assets/scss/mixins.scss";
   .lity-toast{
      position: fixed;
      top: 50%;
@@ -53,15 +54,6 @@ export default {
     &_msg{
       font-size: 13px;
       color: $color-white;
-    }
-  }
-  @keyframes lity-zoom-in {
-    from {
-      opacity: 0;
-      transform: scale3d(.3, .3, .3);
-    }
-    50% {
-      opacity: 1;
     }
   }
 </style>

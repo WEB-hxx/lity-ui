@@ -15,7 +15,6 @@ import Slider from '../pages/sliderPage.vue'
 import QuickStart from '../pages/quickPage.vue'
 import Rate from '../pages/ratePage.vue'
 import Dialog from '../pages/dialogPage.vue'
-import Select from '../pages/selectPage.vue'
 
 const routes = [
   {
@@ -70,10 +69,6 @@ const routes = [
   {
     path: '/switch',
     component: Switch
-  },
-  {
-    path: '/select',
-    component: Select
   },
   {
     path: '/textarea',

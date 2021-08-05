@@ -1,8 +1,35 @@
 {
-  "name": "tiny-ui",
-  "version": "0.1.0",
+  "name": "lity-ui",
+  "version": "1.0.0",
   "private": false,
-  "main": "dist/ui.umd.min.js",
+  "main": "dist/lity-ui.umd.min.js",
+  "style": "dist/lity-ui.css",
+  "keywords": [
+    "lityui Touch",
+    "ui",
+    "lityui",
+    "vue",
+    "vue.js",
+    "vue2.js",
+    "vue3.js",
+    "component",
+    "components",
+    "framework",
+    "vue2 ui",
+    "vue2 components",
+    "vue3 ui",
+    "vue3 components",
+    "mobile",
+    "mobile ui"
+  ],
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://web-hxx.github.io/lity-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WEB-hxx/lity-ui"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

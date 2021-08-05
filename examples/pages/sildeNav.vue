@@ -36,9 +36,6 @@
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/checkbox">复选框 chckbox</router-link>
        </div>
-        <div class="lity-nav__item">
-            <router-link class="tab-link" to="/select">选择框 select</router-link>
-       </div>
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/rate">评分 rate</router-link>
        </div>
@@ -74,7 +71,7 @@ export default {
   z-index: 1;
   min-width: 220px;
   max-width: 220px;
-  padding: 24px 0;
+  padding: 20px 0 30px 0;
   overflow-y: scroll;
   background-color: #fff;
   box-shadow: 0 8px 12px #ebedf0;

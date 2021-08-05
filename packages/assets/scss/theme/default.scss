@@ -11,7 +11,6 @@ $action-sheet-space-bgc : $color-mask-bg;
 $action-sheet-picker-cancel-color : $color-light-grey;
 $action-sheet-picker-cancel-active-color : $color-light-grey-s;
 
-// bubble
 
 // button
 $btn-color : $color-white;
@@ -58,9 +57,6 @@ $btn-disabled-color : $color-white;
 $btn-disabled-bgc : $color-disabled-grey;
 $btn-disabled-bdc : $color-disabled-grey;
 
-// toolbar
-$toolbar-bgc : $color-light-grey-sss;
-$toolbar-active-bgc : $color-active-grey;
 
 // checkbox
 $checkbox-color : $color-grey;
@@ -106,18 +102,11 @@ $checker-item-disabled-bgc : $color-light-grey-ss;
 // dialog
 $dialog-color : $color-grey;
 $dialog-bgc : $color-white;
-$dialog-icon-color : $color-regular-blue;
-$dialog-icon-bgc : $color-background;
-$dialog-title-color : $color-dark-grey;
-$dialog-close-color : $color-light-grey;
-$dialog-btn-color : $color-light-grey;
-$dialog-btn-bgc : $color-white;
-$dialog-btn-active-bgc : $color-light-grey-opacity;
-$dialog-btn-highlight-color : $color-green;
-$dialog-btn-highlight-active-bgc : $color-light-green-opacity;
-$dialog-btn-disabled-color : $color-light-grey;
+$dialog-btn-active-bgc :$color-dark-grey-opacity;
 $dialog-btn-disabled-active-bgc : transparent;
 $dialog-btns-split-color : $color-row-line;
+$dialog-title : $color-dark-grey;
+$dialog-content : $color-grey;
 
 // index-list
 $index-list-bgc : $color-white;
@@ -237,7 +226,7 @@ $scroll-nav-active-color : $color-green;
 // image-preview
 $image-preview-counter-color : $color-white;
 
-// tab-bar & tab-panel
+// tabs
 $tab-color : $color-grey;
 $tab-active-color : $color-dark-green;
 $tab-slider-bgc : $color-dark-green;

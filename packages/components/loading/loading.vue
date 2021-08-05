@@ -6,6 +6,7 @@
   </div>
 </template>
 <script>
+import { isColor } from '../../assets/js/common'
 import { ref, computed } from 'vue'
 const COMPONENT_NAME = 'lity-loading'
 export default {
@@ -15,7 +16,11 @@ export default {
       type: Number
     },
     color: {
-      type: String
+      validator (value) {
+        if (!value) return true
+        return isColor(value)
+      },
+      default: '#666'
     }
   },
   setup (props) {
@@ -48,7 +53,7 @@ export default {
 }
 </script>
 <style lang="scss">
-  @import "../assets/scss/variable.scss";
+  @import "../../assets/scss/variable.scss";
   .lity-loading{
      font-size: $fontsize-large-xxx;
   }

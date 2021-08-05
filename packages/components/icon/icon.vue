@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import { isColor } from '../../assets/js/common'
 const COMPONENT_NAME = 'lity-icon'
 export default {
   name: COMPONENT_NAME,
@@ -16,7 +17,10 @@ export default {
       default: 20
     },
     color: {
-      type: String,
+      validator (value) {
+        if (!value) return true
+        return isColor(value)
+      },
       default: 'inherit'
     }
   }

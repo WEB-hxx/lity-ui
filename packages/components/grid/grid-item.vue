@@ -1,5 +1,5 @@
 <template>
-   <router-link class="lity-grids-item" :to="link || ''" :style="styles" v-if="type == 'link'">
+    <router-link class="lity-grids-item" :to="link || ''" :style="styles" v-if="type == 'link'">
         <div class="lity-grids-icon" v-if="checkIcon">
             <slot name="icon"></slot>
         </div>
@@ -55,8 +55,8 @@ export default {
 }
 </script>
 <style lang="scss">
-  @import "../assets/scss/variable.scss";
-  @import "../assets/scss/mixins.scss";
+  @import "../../assets/scss/variable.scss";
+  @import "../../assets/scss/mixins.scss";
   .lity-grids-item {
     width: 25%;
     float: left;
