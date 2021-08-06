@@ -134,10 +134,10 @@ setup (props) {
 
 <script>
 import { ref } from 'vue'
-import LityRate from '../components/rate/rate'
+// import LityRate from '../components/rate/rate'
 export default {
   components: {
-    LityRate
+    // LityRate
   },
   setup (props) {
     const rate1 = ref(5)

@@ -181,13 +181,13 @@ export default {
 
 <script>
 import { ref } from 'vue'
-import LityCheckbox from '../components/checkbox/checkbox'
-import LityCheckboxGroup from '../components/checkbox/checkbox-group'
+// import LityCheckbox from '../components/checkbox/checkbox'
+// import LityCheckboxGroup from '../components/checkbox/checkbox-group'
 export default {
-  components: {
-    LityCheckbox,
-    LityCheckboxGroup
-  },
+  // components: {
+  //   LityCheckbox,
+  //   LityCheckboxGroup
+  // },
   setup (props) {
     const checkbox1 = ref(true)
     const checkbox2 = ref(true)

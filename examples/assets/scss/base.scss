@@ -1,5 +1,7 @@
+@import "./reset.scss";
 @import "./variable.scss";
 @import "./mixins.scss";
+@import "../icon/tiny-icon.scss";
 
 body, html{
     line-height: 1;

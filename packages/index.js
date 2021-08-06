@@ -1,30 +1,29 @@
-import Style from './components/style/index'
-import Button from './components/button/button.vue'
-import CheckboxGroup from './components/checkbox/checkbox-group.vue'
-import Checkbox from './components/checkbox/checkbox.vue'
-import Dialog from './components/dialog/index'
-import Grid from './components/grid/grid.vue'
-import GridItem from './components/grid/grid-item.vue'
-import Icon from './components/icon/icon.vue'
-import Input from './components/input/input.vue'
-import Loading from './components/loading/loading.vue'
-import Radio from './components/radio/radio.vue'
-import RadioGroup from './components/radio/radio-group.vue'
-import Rate from './components/rate/rate.vue'
-import Slider from './components/slider/slider.vue'
-import SliderItem from './components/slider/slider-item.vue'
-import Switch from './components/switch/switch.vue'
-import Tab from './components/tab/tab.vue'
-import TabPanel from './components/tab/tab-panel.vue'
-import Tag from './components/tag/tag.vue'
-import Textarea from './components/textarea/textarea.vue'
-import Toast from './components/toast/toast.vue'
+import Style from './style'
+import Button from './button'
+import CheckboxGroup from './checkbox-group'
+import Checkbox from './checkbox'
+import Grid from './grid'
+import GridItem from './grid-item'
+import Icon from './icon'
+import Input from './input'
+import Loading from './loading'
+import Radio from './radio'
+import RadioGroup from './radio-group'
+import Rate from './rate'
+import Slider from './slider'
+import SliderItem from './slider-item'
+import Switch from './switch'
+import Tab from './tab'
+import TabPanel from './tab-panel'
+import Tag from './tag'
+import Textarea from './textarea'
+import Toast from './toast'
+import Dialog from './dialog'
 
 const components = [
   Button,
   CheckboxGroup,
   Checkbox,
-  Dialog,
   Grid,
   GridItem,
   Icon,
@@ -36,23 +35,68 @@ const components = [
   Slider,
   SliderItem,
   Switch,
-  Style,
   Tab,
   TabPanel,
   Tag,
-  Textarea,
-  Toast
+  Textarea
 ]
 
+// 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function (Vue) {
-  components.forEach((item) => {
-    Vue.component(item.name, item)
-  })
+  // 判断是否安装
+  if (install.installed) return
+  // 遍历注册全局组件
+  components.map(component => Vue.component(component.name, component))
 }
-
+// 判断是否是直接引入文件
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
+export {
+  install,
+  Style,
+  Toast,
+  Dialog,
+  Button,
+  CheckboxGroup,
+  Checkbox,
+  Grid,
+  GridItem,
+  Icon,
+  Input,
+  Loading,
+  Radio,
+  RadioGroup,
+  Rate,
+  Slider,
+  SliderItem,
+  Switch,
+  Tab,
+  TabPanel,
+  Tag,
+  Textarea
+}
 export default {
-  install
+  install,
+  Style,
+  Toast,
+  Dialog,
+  Button,
+  CheckboxGroup,
+  Checkbox,
+  Grid,
+  GridItem,
+  Icon,
+  Input,
+  Loading,
+  Radio,
+  RadioGroup,
+  Rate,
+  Slider,
+  SliderItem,
+  Switch,
+  Tab,
+  TabPanel,
+  Tag,
+  Textarea
 }
