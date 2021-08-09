@@ -16,7 +16,7 @@ const Toast = (options = {}) => {
   var instance = toastVM._instance.data
   instance.msg = options.msg
   instance.icon = options.icon
-  instance.imgurl = options.imgurl
+  instance.imgUrl = options.imgUrl
   instance.time = options.time || 3000
 
   if (toastTimer) clearTimeout(toastTimer)

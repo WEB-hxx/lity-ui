@@ -3,12 +3,10 @@
     <h1 class="h1">模态框 Dialog</h1>
     <div class="doc-text"><code class="code-tag">Dialog</code> 模态框组件，提供了多种样式及交互形式。</div>
     <h2 class="h2">组件引入</h2>
+<div><div class="doc-text"> 由于 <code class="code-tag">setup</code> 选项中无法访问 <code class="code-tag">this</code>，请在需要 <code class="code-tag">Dialog</code> 组件时通过 <code class="code-tag">import</code> 单独引入。</div></div>
 <div class="code-pre" v-highlight>
 <pre>
-<code>import { createApp } from 'vue';
-import { Dialog } from 'lity-ui';
-const app = createApp();
-app.use(Dialog);</code>
+<code>import { Dialog } from 'lity-ui';</code>
 </pre>
 </div>
 <h2 class="h2">Alert 框</h2>

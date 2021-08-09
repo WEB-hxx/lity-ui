@@ -1,6 +1,6 @@
 {
   "name": "lity-ui",
-  "version": "1.0.0-beta",
+  "version": "1.0.2-test",
   "private": false,
   "main": "dist/lity-ui.umd.min.js",
   "style": "dist/lity-ui.css",
@@ -38,7 +38,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "pack": "npm run lib && npm pack",
-    "lib": "vue-cli-service build --target lib --name lity-ui --dest dist packages/index.js"
+    "lib": "vue-cli-service build --target lib packages/index.js"
   },
   "dependencies": {
     "@better-scroll/core": "^2.4.1",

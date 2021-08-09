@@ -1,8 +1,8 @@
 <template>
 <div class="lity-toast">
   <div class="lity-toast_wrap">
-    <img class="lity-toast_img" v-if="imgurl" :src="imgurl" alt="图标" />
-    <p class="lity-toast_msg">{{msg}}</p>
+    <img class="lity-toast_img" v-if="imgUrl" :src="imgUrl" alt="图标" />
+    <p class="lity-toast_msg" v-html="msg"></p>
   </div>
 </div>
 </template>
@@ -13,7 +13,7 @@ export default {
   name: COMPONENT_NAME,
   data () {
     return {
-      imgurl: '',
+      imgUrl: '',
       msg: '',
       time: 3000
     }

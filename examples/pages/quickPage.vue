@@ -37,6 +37,29 @@ const app = createApp();
 app.use(Lity);</code>
 </pre>
 </div>
+<div class="doc-text"><strong>注意：</strong>Vue2 提供原型链上挂载方法等全局方法，但 Vue 3.0 不再支持直接在 Vue 的原型链上挂载方法，因此从 Vant 3.0 开始，使用全局方法前必须先通过 app.use 将组件注册到对应的 app 上；<code class="code-tag">Toast, Dialog</code>组件是动态创建的dom，需要用到时要单独在你的组件上单独 import 引入：</div>
+<div class="code-pre" v-highlight>
+<pre>
+<code>import { Toast, Dialog } from 'vue';
+setup (props) {
+    function ToastClick () {
+        Toast({ msg: '我是一个轻提示！'})
+    }
+    function DialogClick () {
+       Dialog({
+        type: 'alert',
+        title: '我是标题',
+        content: '我是Alert内容啦'
+      })
+    }
+    return {
+        ToastClick,
+        DialogClick
+    }
+}
+</code>
+</pre>
+</div>
 
 <h2 class="h2">按需引入</h2>
 <div class="doc-text">可以单独在组件引入</div>
@@ -50,7 +73,7 @@ app.use(Button);</code>
 </div>
 <div class="doc-text"><strong style="font-weight: 800;">注意：</strong> 按需引入的话，是不会打包基础样式部分的，所以在使用的时候需要引入 <code class="code-tag">style</code> 模块。</div>
 <h2 class="h2">版本</h2>
-<div class="doc-text">版本：<code class="code-tag">v1.0.0 beta</code> 目前在公测中，版本随着组件的添加修改会不断频繁更新版本，直接在真实项目中使用还需谨慎。</div>
+<div class="doc-text">版本：<code class="code-tag">v1.0.1-beta</code> 目前在公测中，版本随着组件的添加修改会不断频繁更新版本，直接在真实项目中使用还需谨慎。</div>
 
 <h2 class="h2">奉献代码</h2>
 <div class="doc-text">有任何建议或意见你可以 <a href="https://github.com/WEB-hxx/lity-ui/pulls" style="color:blue">Pull Request</a> 进行代码贡献。</div>

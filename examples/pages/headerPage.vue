@@ -9,7 +9,7 @@
                 </a>
             </li>
             <li class="lity-header__top-nav-item">
-                <a target="_blank" href="https://github.com/WEB-hxx/lity-ui" class="lity-header__version">1.0.0</a>
+                <a target="_blank" href="https://www.npmjs.com/package/lity-ui" class="lity-header__version">1.0.1-beta</a>
             </li>
           </ul>
        </div>
