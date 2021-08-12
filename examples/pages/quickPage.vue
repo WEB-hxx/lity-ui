@@ -16,16 +16,16 @@
     <li class="doc-text">动画流畅、接近原生为目标，在交互体验方面追求极致。</li>
     <li class="doc-text">还原细致、漂亮的 UI设计。</li>
     <li class="doc-text">使用单文件的 Vue 组件化开发模式。</li>
-    <li class="doc-text">基于 npm + webpack + babel 开发，支持 ES6+ 以上语法。</li>
+    <li class="doc-text">基于 vue-cli4.x 脚手架开发，支持 ES6+ 以上语法。</li>
 </ul>
 <h2 class="h2">NPM 安装</h2>
-<div class="doc-text">推荐使用 <code class="code-tag">npm</code> 来安装，享受生态圈和工具带来的便利，更好地和 <code class="code-tag">webpack</code> 配合使用，当然，也推荐使用 ES2015。</div>
+<div class="doc-text">推荐使用 <code class="code-tag">npm</code> 来安装，享受生态圈和工具带来的便利，更好地和 <code class="code-tag">webpack</code> 配合使用，当然，也推荐使用 ES2015；目前安装环境需要大于等于  <code class="code-tag"> @vue/cli4.5.x</code> 以上的版本才能兼容生效；后续看使用情况而改版 webpack 兼容</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>$ npm install lity-ui --save</code>
 </pre>
 </div>
-<div>为了能让组件正常导出引用，可能需要在你的项目根目录下新建一个文件 <code class="code-tag">legacy.d.ts</code>，写入如下：</div>
+<div class="doc-text">如果不能正常引用，可能需要在你的项目根目录下新建一个文件 <code class="code-tag">legacy.d.ts</code>，写入如下：</div>
 <div class="code-pre" v-highlight>
 <pre>
 <code>declare module 'lity-ui';</code>
