@@ -4,16 +4,13 @@ import {
 } from 'vue'
 import Comp from './toast.vue'
 let isLock = false
-let [toastTimer, toastVM, toastWrapper] = [null, null, null]
+let toastTimer = null
 const Toast = (options = {}) => {
   if (isLock) return
   isLock = true
-  toastVM = createApp(Comp)
-  toastWrapper = document.createElement('div')
-  toastWrapper.id = 'lity-toast'
-  document.body.appendChild(toastWrapper)
-  toastVM.mount('#lity-toast')
-  var instance = toastVM._instance.data
+  const el = document.createElement('div')
+  const app = createApp(Comp)
+  const instance = app.mount(document.body.appendChild(el))
   instance.msg = options.msg
   instance.icon = options.icon
   instance.imgurl = options.imgurl
@@ -23,9 +20,9 @@ const Toast = (options = {}) => {
   // 定时器，持续时长之后隐藏
   toastTimer = setTimeout(() => {
     isLock = false
-    document.body.removeChild(toastWrapper)
+    document.body.removeChild(el)
     clearTimeout(toastTimer)
-  }, instance.time)
+  }, options.time || 3000)
 }
 
 export default Toast

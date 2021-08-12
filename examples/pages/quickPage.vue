@@ -25,7 +25,12 @@
 <code>$ npm install lity-ui --save</code>
 </pre>
 </div>
-
+<div>为了能让组件正常导出引用，可能需要在你的项目根目录下新建一个文件 <code class="code-tag">legacy.d.ts</code>，写入如下：</div>
+<div class="code-pre" v-highlight>
+<pre>
+<code>declare module 'lity-ui';</code>
+</pre>
+</div>
 <h2 class="h2">全局使用(推荐使用)</h2>
 <div class="doc-text">一般在入口文件中：main.js 上配置</div>
 <div class="code-pre" v-highlight>
@@ -74,7 +79,7 @@ app.use(Button);</code>
 </div>
 <div class="doc-text"><strong style="font-weight: 800;">注意：</strong> 按需引入的话，是没有基础样式部分的，所以还需要全局引用样式。</div>
 <h2 class="h2">版本</h2>
-<div class="doc-text">版本：<code class="code-tag">1.0.0-alpha</code> 目前在公测中，版本随着组件的添加修改会不断频繁更新版本，直接在真实项目中使用还需谨慎。</div>
+<div class="doc-text">版本：<code class="code-tag">1.0.1-alpha</code> 目前在公测中，版本随着组件的添加修改会不断频繁更新版本，直接在真实项目中使用还需谨慎。</div>
 
 <h2 class="h2">奉献代码</h2>
 <div class="doc-text">有任何建议或意见你可以 <a href="https://github.com/WEB-hxx/lity-ui/pulls" style="color:blue">Pull Request</a> 进行代码贡献。</div>

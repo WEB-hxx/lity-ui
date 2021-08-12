@@ -5728,16 +5728,13 @@ toastvue_type_script_lang_js.render = toastvue_type_template_id_48b8e553_render
 
 
 let toast_isLock = false
-let [toastTimer, toastVM, toastWrapper] = [null, null, null]
+let toastTimer = null
 const Toast = (options = {}) => {
   if (toast_isLock) return
   toast_isLock = true
-  toastVM = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createApp"])(toast)
-  toastWrapper = document.createElement('div')
-  toastWrapper.id = 'lity-toast'
-  document.body.appendChild(toastWrapper)
-  toastVM.mount('#lity-toast')
-  var instance = toastVM._instance.data
+  const el = document.createElement('div')
+  const app = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createApp"])(toast)
+  const instance = app.mount(document.body.appendChild(el))
   instance.msg = options.msg
   instance.icon = options.icon
   instance.imgurl = options.imgurl
@@ -5747,9 +5744,9 @@ const Toast = (options = {}) => {
   // 定时器，持续时长之后隐藏
   toastTimer = setTimeout(() => {
     toast_isLock = false
-    document.body.removeChild(toastWrapper)
+    document.body.removeChild(el)
     clearTimeout(toastTimer)
-  }, instance.time)
+  }, options.time || 3000)
 }
 
 /* harmony default export */ var packages_toast = (Toast);
