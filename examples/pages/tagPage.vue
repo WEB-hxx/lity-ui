@@ -83,11 +83,11 @@ app.use(Tag);</code>
 </template>
 
 <script>
-// import LityTag from '../components/tag/tag'
+import LityTag from '../components/tag/tag'
 export default {
-  // components: {
-  //   LityTag
-  // }
+  components: {
+    LityTag
+  }
 }
 </script>
 
