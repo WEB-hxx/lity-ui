@@ -1,10 +1,8 @@
 import {
   createApp
 } from 'vue'
-import {
-  isLock
-} from '../assets/js/common'
-import Comp from './src/dialog.vue'
+import { isLock } from '../assets/js/common.js'
+import Comp from './dialog.vue'
 const Dialog = (options = {}) => {
   const el = document.createElement('div')
   const app = createApp(Comp)

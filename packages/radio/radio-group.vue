@@ -6,7 +6,7 @@
 
 <script type="text/babel">
 import { provide } from 'vue'
-import { isColor } from '../../assets/js/common'
+import { isColor } from '../assets/js/common.js'
 const COMPONENT_NAME = 'lity-radio-group'
 export default {
   name: COMPONENT_NAME,

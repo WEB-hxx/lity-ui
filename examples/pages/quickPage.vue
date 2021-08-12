@@ -8,7 +8,7 @@
         <p>基于 vue3 开源的高质量、轻量可靠、功能丰富的 Ui 组件库</p>
     </div>
     <h2 class="h2">前言</h2>
-    <div class="doc-text"><code class="code-tag">lity-ui</code> 目前由我一人维护开发，个人能力精力有限，开源的初心纯属是为了学习Vue3源码的那份热情支撑着，提出的问题不一定能及时处理；如果觉得好的话，请在github上点一下 <code class="code-tag">star</code>。</div>
+    <div class="doc-text"><code class="code-tag">lity-ui</code> 目前由我一人维护开发，个人能力精力有限，纯属是为了学习框架的一颗好奇心而去与更优秀的人开源交流学习，提出的问题不一定能及时处理；如果觉得好的话，请在github上点一下 <code class="code-tag">star</code>。</div>
 <h2 class="h2">特性</h2>
 <ul>
     <li class="doc-text">高质量、轻量可靠、功能丰富。</li>
@@ -26,7 +26,7 @@
 </pre>
 </div>
 
-<h2 class="h2">全局使用</h2>
+<h2 class="h2">全局使用(推荐使用)</h2>
 <div class="doc-text">一般在入口文件中：main.js 上配置</div>
 <div class="code-pre" v-highlight>
 <pre>
@@ -67,13 +67,14 @@ setup (props) {
 <pre>
 <code>import { createApp } from 'vue';
 import { Style, Button } from 'lity-ui';
+import 'lity-ui/dist/lity-ui.css';
 const app = createApp();
 app.use(Button);</code>
 </pre>
 </div>
-<div class="doc-text"><strong style="font-weight: 800;">注意：</strong> 按需引入的话，是不会打包基础样式部分的，所以在使用的时候需要引入 <code class="code-tag">style</code> 模块。</div>
+<div class="doc-text"><strong style="font-weight: 800;">注意：</strong> 按需引入的话，是没有基础样式部分的，所以还需要全局引用样式。</div>
 <h2 class="h2">版本</h2>
-<div class="doc-text">版本：<code class="code-tag">v1.0.1-beta</code> 目前在公测中，版本随着组件的添加修改会不断频繁更新版本，直接在真实项目中使用还需谨慎。</div>
+<div class="doc-text">版本：<code class="code-tag">1.0.0-alpha</code> 目前在公测中，版本随着组件的添加修改会不断频繁更新版本，直接在真实项目中使用还需谨慎。</div>
 
 <h2 class="h2">奉献代码</h2>
 <div class="doc-text">有任何建议或意见你可以 <a href="https://github.com/WEB-hxx/lity-ui/pulls" style="color:blue">Pull Request</a> 进行代码贡献。</div>

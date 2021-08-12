@@ -1,5 +1,4 @@
-const path = require('path')
-module.exports = {
+const devConfig = {
   pages: {
     index: {
       entry: 'examples/main.js',
@@ -7,12 +6,15 @@ module.exports = {
       filename: 'index.html'
     }
   },
+
   // outputDir: 'lity-ui',
   // publicPath: '/lity-ui',
   chainWebpack: config => {
     config.module
       .rule('js')
-      .include.add(path.resolve(__dirname, 'packages')).end()
+      .include
+      .add('/packages')
+      .end()
       .use('babel')
       .loader('babel-loader')
       .tap(options => {
@@ -20,3 +22,5 @@ module.exports = {
       })
   }
 }
+
+module.exports = devConfig

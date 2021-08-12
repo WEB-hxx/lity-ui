@@ -18,7 +18,7 @@ Docs: <a href="https://web-hxx.github.io/lity-ui"> https://web-hxx.github.io/lit
 ```
 $ npm install lity-ui --save
 ```
-#### 全局引用
+#### 全局引用（推荐）
 ###### 一般在入口文件中：main.js 上引入
 
 ```
@@ -32,8 +32,9 @@ app.use(Lity);
 
 ```
 import { createApp } from 'vue';
-import { Style, Button } from 'lity-ui';
+import { Button } from 'lity-ui';
+import 'lity-ui/dist/lity-ui.css';
 const app = createApp();
 app.use(Button);
 ```
-<p><strong style="font-weight: 800;">注意：</strong> 按需引入的话，是不会打包基础样式部分的，所以在使用的时候需要引入 <code>style</code> 模块。</p>
+<p><strong style="font-weight: 800;">注意：</strong> 按需引入的话，是没有基础样式部分的，所以还需要全局引用样式。</p>

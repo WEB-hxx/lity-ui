@@ -90,7 +90,7 @@ export default {
 <div class="code-pre" v-highlight>
 <pre>
 <code>&lt;template&gt;
-  &lt;lity-checkbox-group color="red" :size="30" shape="circle" v-model="checkbox2"&gt;
+  &lt;lity-checkbox-group color="#f00" :size="30" shape="circle" v-model="checkbox2"&gt;
     &lt;lity-checkbox val="小米"&gt;&lt;span style="font-size: 24px;"&gt;小米&lt;/span&gt;&lt;/lity-checkbox&gt;
     &lt;lity-checkbox disabled val="苹果"&gt;&lt;span style="font-size: 24px;"&gt;苹果&lt;/span&gt;&lt;/lity-checkbox&gt;
     &lt;lity-checkbox val="华为"&gt;&lt;span style="font-size: 24px;"&gt;华为&lt;/span&gt;&lt;/lity-checkbox&gt;
@@ -100,7 +100,7 @@ export default {
 </pre>
 </div>
 <div class="doc-text">值：{{checkbox5}}</div>
-<lity-checkbox-group color="red" shape="circle" :size="30" v-model="checkbox5">
+<lity-checkbox-group color="#f00" shape="circle" :size="30" v-model="checkbox5">
     <lity-checkbox val="小米"><span style="font-size: 24px;">小米</span></lity-checkbox>
     <lity-checkbox disabled val="苹果"><span style="font-size: 24px;">苹果</span></lity-checkbox>
     <lity-checkbox val="华为"><span style="font-size: 24px;">华为</span></lity-checkbox>
@@ -157,7 +157,7 @@ export default {
     <td>disabled</td> <td>值</td><td>boolean</td> <td> - </td><td>false</td>
   </tr>
   <tr>
-    <td>color</td> <td>选中复选框的颜色</td><td>String && 常规颜色值</td> <td> - </td><td>#000</td>
+    <td>color</td> <td>选中复选框的颜色</td><td>String && 常规颜色值</td> <td> - </td><td>#07c160</td>
   </tr>
    <tr>
     <td>shape</td> <td>复选框圆形和方形</td><td>String</td> <td><code class="code-tag">circle</code>, <code class="code-tag">square</code></td><td>square</td>
@@ -181,13 +181,13 @@ export default {
 
 <script>
 import { ref } from 'vue'
-// import LityCheckbox from '../components/checkbox/checkbox'
-// import LityCheckboxGroup from '../components/checkbox/checkbox-group'
+import LityCheckbox from '../components/checkbox/checkbox'
+import LityCheckboxGroup from '../components/checkbox/checkbox-group'
 export default {
-  // components: {
-  //   LityCheckbox,
-  //   LityCheckboxGroup
-  // },
+  components: {
+    LityCheckbox,
+    LityCheckboxGroup
+  },
   setup (props) {
     const checkbox1 = ref(true)
     const checkbox2 = ref(true)

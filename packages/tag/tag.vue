@@ -7,7 +7,7 @@
 </template>
 
 <script >
-import { isColor } from '../../assets/js/common'
+import { isColor } from '../assets/js/common.js'
 import { computed } from 'vue'
 const COMPONENT_NAME = 'lity-tag'
 export default {
@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style lang="scss" >
-  @import "../../assets/scss/variable.scss";
+  @import "../assets/scss/variable.scss";
   .lity-tag{
       color: $action-sheet-bgc;
       font-size: 12px;

@@ -67,7 +67,7 @@ export default {
   position: fixed;
   left: 0;
   top: 64px;
-  height: 100%;
+  height: calc(100% - 100px);
   z-index: 1;
   min-width: 220px;
   max-width: 220px;
