@@ -15,6 +15,7 @@ import Slider from '../pages/sliderPage.vue'
 import QuickStart from '../pages/quickPage.vue'
 import Rate from '../pages/ratePage.vue'
 import Dialog from '../pages/dialogPage.vue'
+import CountDown from '../pages/countdownPage.vue'
 
 const routes = [
   {
@@ -85,6 +86,10 @@ const routes = [
   {
     path: '/dialog',
     component: Dialog
+  },
+  {
+    path: '/countdown',
+    component: CountDown
   }
 ]
 

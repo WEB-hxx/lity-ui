@@ -53,6 +53,10 @@
         <div class="lity-nav__item">
             <router-link class="tab-link" to="/dialog">模态框 Dialog</router-link>
        </div>
+       <div class="lity-nav__title">时间</div>
+       <div class="lity-nav__item">
+            <router-link class="tab-link" to="/countdown">倒计时 CountDown</router-link>
+       </div>
    </div>
 </template>
 
