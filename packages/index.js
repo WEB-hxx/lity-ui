@@ -18,6 +18,7 @@ import LityTab from './tab/tab.vue'
 import LityTabPanel from './tab/tab-panel.vue'
 import LityTag from './tag/tag.vue'
 import LityTextarea from './textarea/textarea.vue'
+import lityCountDown from './countdown/count-down.vue'
 import Toast from './toast/index'
 import Dialog from './dialog/index'
 
@@ -38,6 +39,7 @@ const Tab = {}
 const TabPanel = {}
 const Tag = {}
 const Textarea = {}
+const CountDown = {}
 
 Button.install = Vue => { Vue.component(LityButton.name, LityButton) }
 CheckboxGroup.install = Vue => { Vue.component(LityCheckboxGroup.name, LityCheckboxGroup) }
@@ -56,6 +58,7 @@ Tab.install = Vue => { Vue.component(LityTab.name, LityTab) }
 TabPanel.install = Vue => { Vue.component(LityTabPanel.name, LityTabPanel) }
 Tag.install = Vue => { Vue.component(LityTag.name, LityTag) }
 Textarea.install = Vue => { Vue.component(LityTextarea.name, LityTextarea) }
+CountDown.install = Vue => { Vue.component(lityCountDown.name, lityCountDown) }
 
 export {
   Base,
@@ -76,6 +79,7 @@ export {
   TabPanel,
   Tag,
   Textarea,
+  CountDown,
   Toast,
   Dialog
 }
@@ -98,7 +102,8 @@ const components = [
   LityTab,
   LityTabPanel,
   LityTag,
-  LityTextarea
+  LityTextarea,
+  lityCountDown
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
