@@ -57,6 +57,10 @@
        <div class="lity-nav__item">
             <router-link class="tab-link" to="/countdown">倒计时 CountDown</router-link>
        </div>
+        <div class="lity-nav__title">test</div>
+       <div class="lity-nav__item">
+            <router-link class="tab-link" to="/test">test</router-link>
+       </div>
    </div>
 </template>
 

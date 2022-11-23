@@ -48,6 +48,7 @@
     "@better-scroll/slide": "^2.4.1",
     "@better-scroll/wheel": "^2.4.2",
     "core-js": "^3.6.5",
+    "echarts": "^5.3.2",
     "highlight.js": "^11.1.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.10"

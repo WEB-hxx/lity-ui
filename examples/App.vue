@@ -9,12 +9,17 @@
 </template>
 
 <script>
+import { provide } from 'vue'
+import * as echarts from 'echarts'
 import LityHeader from './pages/headerPage'
 import LityNav from './pages/sildeNav'
 export default {
   components: {
     LityHeader,
     LityNav
+  },
+  setup () {
+    provide('ec', echarts)
   }
 }
 </script>
